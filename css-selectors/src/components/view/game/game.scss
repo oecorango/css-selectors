@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  height: 100%;
+  width: 70%;
+  flex-direction: column;
+  order: 10;
+}
+
+.header {
+  height: 6%;
+  background-color: black;
+}
+
+.current-task {
+  height: 47%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: aqua;
+}
+
+.editor {
+  display: flex;
+  height: 47%;
+}
+
+.editor > * {
+  width: 50%;
+}
