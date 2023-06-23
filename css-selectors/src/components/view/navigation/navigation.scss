@@ -7,4 +7,7 @@
   align-items: center;
   font-size: 2rem;
   background-color: rgb(68, 0, 255);
+  @media (max-width: 1020px) {
+    width: 10%;
+  }
 }

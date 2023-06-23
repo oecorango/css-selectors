@@ -1,12 +1,7 @@
 import { nav } from './navigation/navigation';
 import { main, header, currentTask, editor, footer } from './game/game';
-import { htmlEditor } from './editor/editor-html';
-import { cssEditor } from './editor/editor-css';
-import levelsTask from './levels.json';
-
-function getHtmlCode(levelNum: number): string {
-  return levelsTask[levelNum].level;
-}
+import { createHtmlEditor } from './editor/editor-html';
+import { createCssEditor } from './editor/editor-css';
 
 export function createPage(): void {
   nav.create();
@@ -14,7 +9,7 @@ export function createPage(): void {
   header.create();
   currentTask.create();
   editor.create();
-  cssEditor.create();
-  htmlEditor.create(getHtmlCode(9));
+  createCssEditor();
+  createHtmlEditor();
   footer.create();
 }

@@ -1,0 +1,41 @@
+.editor__html {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: 50%;
+  order: 0;
+}
+
+.editor-html__header {
+  display: flex;
+  justify-content: space-between;
+  order: -1;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.editor__content {
+  display: flex;
+}
+
+.editor__code {
+  width: 95%;
+  order: 1;
+  background-color: #23241f;
+}
+
+.editor__str {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+  padding: 0.5em;
+  width: 5%;
+  order: 0;
+}
+
+.code__html {
+  margin: 0;
+}

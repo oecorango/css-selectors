@@ -17,7 +17,7 @@ export class CreateEltment {
     const createElem = document.createElement(this.tag);
     createElem.classList.add(this.name);
     if (code) {
-      createElem.innerHTML = `<pre class="code__html"><code class="html">${code}</code></pre>`;
+      createElem.innerHTML = code;
     }
 
     parent?.append(createElem);

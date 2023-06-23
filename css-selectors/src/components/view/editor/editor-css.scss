@@ -1,0 +1,64 @@
+.editor {
+  display: flex;
+  height: 47%;
+  background-color: #a5a5a5;
+  border: 8px solid #5c5c5c;
+  border-radius: 5px;
+}
+
+.editor__css {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: 50%;
+}
+
+.editor-css__header {
+  display: flex;
+  justify-content: space-between;
+  order: -1;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 0 5px 5px;
+}
+
+.editor-css__content {
+  display: flex;
+}
+
+.editor-css__code {
+  width: 95%;
+  order: 1;
+  background-color: #dfdfdf;
+  padding-top: 2px;
+}
+
+.editor-css__str {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+  padding: 0.5em;
+  width: 5%;
+  order: 0;
+}
+
+.css__text {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+.input-css__code {
+  display: inline-block;
+  margin-right: 5%;
+  width: 60%;
+}
+
+.button-css__code{
+  display: inline-block;
+  width: 30%;
+}
