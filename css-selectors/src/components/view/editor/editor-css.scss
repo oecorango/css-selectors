@@ -9,6 +9,7 @@
 .editor__css {
   display: flex;
   flex-direction: column;
+  border-right: 4px solid #5c5c5c;
   padding: 0.5em;
   width: 50%;
 }
@@ -54,6 +55,9 @@
 
 .input-css__code {
   display: inline-block;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
   margin-right: 5%;
   width: 60%;
 }

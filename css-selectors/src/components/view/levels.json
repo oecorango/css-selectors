@@ -1,32 +1,42 @@
 [
   {
+    "level": "1",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "2",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "3",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "4",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "5",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "6",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "7",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "8",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "9",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   },
   {
+    "level": "10",
     "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>"
   }
 ]

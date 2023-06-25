@@ -5,10 +5,16 @@ export class CreateEltment {
 
   private name: string;
 
-  constructor(parent: string, tag: string, name: string) {
+  private attributeName?: string;
+
+  private attributeValue?: string;
+
+  constructor(parent: string, tag: string, name: string, attributeName?: string, attributeValue?: string) {
     this.parent = parent;
     this.tag = tag;
     this.name = name;
+    this.attributeName = attributeName;
+    this.attributeValue = attributeValue;
   }
 
   public create(code?: string): void {
@@ -19,7 +25,12 @@ export class CreateEltment {
     if (code) {
       createElem.innerHTML = code;
     }
+    // if (this.attributeName && this.attributeValue) createElem.setAttribute(this.attributeName, this.attributeValue);
 
     parent?.append(createElem);
   }
+
+  // public getAttibute() {
+
+  // }
 }

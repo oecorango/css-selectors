@@ -1,8 +1,9 @@
 @import './scss/normalaze';
 
-// html {
-//   box-sizing: border-box;
-// }
+html {
+  // background-color: black;
+  user-select: none;
+}
 
 body {
   display: flex;
