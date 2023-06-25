@@ -15,9 +15,10 @@
 }
 
 .current-task {
-  height: 47%;
+  height: 70%;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  background-color: aqua;
+  background-image: url(../../../assets/room.jpg);
+  background-size: cover;
 }
