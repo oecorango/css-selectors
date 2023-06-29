@@ -1,3 +1,5 @@
+import { createLevel } from '../task-for-game/tasks';
+
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
     if (elem) {
@@ -8,10 +10,14 @@ export class EventEmitter {
     }
   }
 
-  public static onClick(elem: HTMLElement | null): void {
+  public static onClickButton(elem: HTMLElement | null /* , func: ToogleClassName */): void {
     if (elem) {
       elem.addEventListener('click', () => {
-        console.log('1233');
+        const gameRender = document.querySelector('.current-task');
+        while (gameRender?.firstChild) {
+          gameRender.removeChild(gameRender.firstChild);
+        }
+        createLevel('02');
       });
     }
   }

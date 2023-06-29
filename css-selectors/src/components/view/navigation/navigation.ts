@@ -1,7 +1,7 @@
 import './navigation.scss';
 import { CreateEltment } from '../../classes/Create-element';
 import levelsTask from '../levels.json';
-import { EventEmitter } from '../../classes/EventEmeitter';
+// import { EventEmitter } from '../../classes/EventEmeitter';
 
 export function createNavigation(): void {
   const header = new CreateEltment('body', 'header', 'header');
@@ -18,9 +18,5 @@ export function createNavigation(): void {
     const complitedLevel = new CreateEltment(`.task-${value.level}`, 'span', 'checkmark');
     levels.create(value.level);
     complitedLevel.create();
-
-    const buttons: HTMLElement | null = document.querySelector(`.task-${value.level}`);
-
-    EventEmitter.onClick(buttons);
   });
 }
