@@ -1,5 +1,5 @@
 import './game.scss';
-import { CreateEltment } from '../Create-element';
+import { CreateEltment } from '../../classes/Create-element';
 
 export function createGame(): void {
   const main = new CreateEltment('body', 'main', 'main');

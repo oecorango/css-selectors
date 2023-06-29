@@ -1,0 +1,104 @@
+.current-task {
+  perspective-origin: 50% 100%;
+  perspective: 250px;
+  & > * {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px 50px;
+    background-size: contain;
+    transform: perspective(400px) rotateX(26deg);
+    @media (max-width: 800px) {
+      width: 140px;
+      height: 140px;
+      margin: 0 20px 40px;
+    }
+  }
+}
+
+.t-shirt,
+.pillow,
+.box, 
+.paper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.t-shirt {
+  background-image: url(../../assets/t-shirt.png);
+}
+
+.pillow {
+  height: 175px;
+  background-image: url(../../assets/pillow.png);
+}
+
+.box {
+  background-image: url(../../assets/box.png);
+}
+
+.paper {
+  height: 175px;
+  background-image: url(../../assets/paper.jpg);
+
+}
+
+.strobe {
+  animation: strobeStart .5s ease-out, strobe 1s infinite;
+  animation-delay: 0s, .5s;
+}
+
+@keyframes strobeStart {
+  0% {
+    transform: skew(0deg,0deg)
+    scaleY(1)
+    rotateX(28deg);
+    animation-timing-function: ease-in;
+  }
+  40% {
+    transform: skew(0deg,0deg)
+    scaleY(.9)
+    rotateX(28deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: skew(4deg, 0deg)
+    scaleX(1)
+    rotateX(28deg);
+  }
+}
+
+@keyframes strobe {
+  0% { transform:
+    skew(4deg, 0deg)
+    scaleX(0.95)
+    rotateX(28deg);
+  }
+  10% { transform:
+    skew(1deg, 0deg)
+    scaleY(1)
+    rotateX(28deg);
+  }
+  50% { transform:
+    skew(-4deg, 0deg)
+    scaleX(.95)
+    rotateX(28deg);
+  }
+  60% { transform:
+    skew(-1deg, 0deg)
+    scaleY(1)
+    rotateX(28deg);
+  }
+  100% {transform:
+    skew(4deg, 0deg)
+    scaleX(.95)
+    rotateX(28deg); 
+  }
+}
+
+.cat {
+  background-image: url(../../assets/cat.png);
+  background-size: cover;
+  width: 50%;
+  height: 50%;
+}

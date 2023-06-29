@@ -66,3 +66,22 @@
   display: inline-block;
   width: 30%;
 }
+
+.shake {
+  animation: shake .1s 4;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

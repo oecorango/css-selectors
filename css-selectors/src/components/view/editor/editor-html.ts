@@ -1,5 +1,5 @@
 import './editor-html.scss';
-import { CreateEltment } from '../Create-element';
+import { CreateEltment } from '../../classes/Create-element';
 import levelsTask from '../levels.json';
 
 function getHtmlCode(levelNum: number): string {

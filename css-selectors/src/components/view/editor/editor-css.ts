@@ -1,5 +1,5 @@
 import './editor-css.scss';
-import { CreateEltment } from '../Create-element';
+import { CreateEltment } from '../../classes/Create-element';
 
 export function createCssEditor(): void {
   const cssEditor = new CreateEltment('.editor', 'div', 'editor__css');

@@ -23,19 +23,21 @@
   @media (max-width: 1020px) {
     width: 10%;
     button {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
     h2 {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 700px) {
     width: 10%;
     button {
       font-size: 0.8rem;
     }
     h2 {
-      font-size: 0.8rem;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      font-size: 1.5rem;
     }
   }
 }
@@ -56,7 +58,7 @@
     @media (max-width: 1020px) {
       font-size: 1rem;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       flex-direction: column;
     }
     &:hover {
