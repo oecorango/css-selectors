@@ -14,9 +14,9 @@ export function createNavigation(): void {
   resetBtn.create('Reset game');
 
   levelsTask.forEach((value) => {
-    const levels = new CreateEltment('.navigation', 'button', `task-${value.level}`);
-    const complitedLevel = new CreateEltment(`.task-${value.level}`, 'span', 'checkmark');
+    const levels = new CreateEltment('.navigation', 'button', 'task');
+    // const complitedLevel = new CreateEltment(`.task-${value.level}`, 'span', 'checkmark');
     levels.create(value.level);
-    complitedLevel.create();
+    // complitedLevel.create();
   });
 }

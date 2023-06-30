@@ -12,28 +12,13 @@
   & h2 {
     margin: 0;
   }
-  & button {
-    border-radius: 5px;
-    background-color: #747474;;
-    color: #fff;
-    &:hover {
-      background-color: #353535;
-    }
-  }
   @media (max-width: 1020px) {
     width: 10%;
-    button {
-      font-size: 1.5rem;
-    }
     h2 {
       font-size: 1.5rem;
     }
   }
   @media (max-width: 700px) {
-    width: 10%;
-    button {
-      font-size: 0.8rem;
-    }
     h2 {
       writing-mode: vertical-lr;
       text-orientation: upright;
@@ -42,29 +27,46 @@
   }
 }
 
+.task,
+.reset-game {
+  padding: 5px 10px;
+  margin: 2px 0px;
+  border-radius: 5px;
+  background-color: #747474;;
+  color: #fff;
+  &.task_current {
+    background-color: #7b7e51;
+    &:hover {
+      background-color: #7b7e51;
+    }
+  }
+  &.task_copmlite {
+    background-color: #517e53;
+    &:hover {
+      background-color: #517e53;
+    }
+  }
+  &:hover {
+    background-color: #353535;
+  }
+  transition: all .3s ease-out;
+  @media (max-width: 1020px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 800px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 550px) {
+    padding: 5px 5px;
+    font-size: 0.8rem;
+  }
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
   width: 90%;
   padding: 15px 0;
-  & button {
-    order: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px 10px;
-    margin: 2px 0px;
-    text-decoration: none;
-    @media (max-width: 1020px) {
-      font-size: 1rem;
-    }
-    @media (max-width: 700px) {
-      flex-direction: column;
-    }
-    &:hover {
-      background-color: #353535;
-    }
-  }
 }
 
 .checkmark {

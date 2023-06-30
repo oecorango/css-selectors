@@ -5,8 +5,8 @@ import { createLevel02 } from './task-02';
 import { createLevel03 } from './task-03';
 
 export function createLevel(levelNum: string | null): void {
-  // const task = document.querySelector('.current-task');
-
+  // const buttons = document.querySelectorAll(`.task`);
+  // console.log(buttons);
   // if (task && levelNum) task.classList.add(`current-task_${levelNum}`);
   // if (task && levelNum === null) task.classList.add('current-task_01');
 

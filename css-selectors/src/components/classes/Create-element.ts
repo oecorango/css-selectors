@@ -23,8 +23,8 @@ export class CreateEltment {
     parent?.append(createElem);
   }
 
-  public getElement(): HTMLElement {
-    const elem = document.querySelector(`.${this.name}`);
-    return elem as HTMLElement;
+  public getElement(): NodeListOf<Element> {
+    const elem = document.querySelectorAll(`.${this.name}`);
+    return elem;
   }
 }

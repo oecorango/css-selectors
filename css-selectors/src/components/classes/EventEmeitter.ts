@@ -1,4 +1,5 @@
 import { createLevel } from '../task-for-game/tasks';
+// import { CreateEltment } from './Create-element';
 
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
@@ -17,18 +18,23 @@ export class EventEmitter {
         while (gameRender?.firstChild) {
           gameRender.removeChild(gameRender.firstChild);
         }
-        EventEmitter.setLocalStorage(elem.innerText);
+        EventEmitter.setLocalStorage('level', elem.innerText);
         createLevel(elem.innerText);
+
+        const buttons = document.querySelectorAll('.task');
+        buttons.forEach((btn) => btn.classList.remove('task_current'));
+        elem.classList.add('task_current');
+        EventEmitter.setLocalStorage('current-level', elem.innerText);
       });
     }
   }
 
-  public static setLocalStorage(value: string): void {
-    window.addEventListener('beforeunload', () => localStorage.setItem('level', value));
+  public static setLocalStorage(name: string, value: string): void {
+    window.addEventListener('beforeunload', () => localStorage.setItem(name, value));
   }
 
-  public static getLocalStorage(): string | null {
-    const levels: string | null = localStorage.getItem('level');
+  public static getLocalStorage(name: string): string | null {
+    const levels: string | null = localStorage.getItem(name);
     return levels;
   }
 }
