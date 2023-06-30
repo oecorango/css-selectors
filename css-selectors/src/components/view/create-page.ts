@@ -4,8 +4,8 @@ import { createHtmlEditor } from './editor/editor-html';
 import { createCssEditor } from './editor/editor-css';
 
 export function createPage(): void {
-  createNavigation();
   createGame();
+  createNavigation();
   createCssEditor();
   createHtmlEditor();
 }

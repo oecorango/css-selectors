@@ -4,19 +4,20 @@ import levelsTask from '../levels.json';
 // import { EventEmitter } from '../../classes/EventEmeitter';
 
 export function createNavigation(): void {
-  const header = new CreateEltment('body', 'header', 'header');
-  const headerName = new CreateEltment('.header', 'h2', 'header__head');
-  const navigation = new CreateEltment('.header', 'div', 'navigation');
-  const resetBtn = new CreateEltment('.header', 'button', 'reset-game');
+  const header = new CreateEltment('body', 'aside', 'aside');
+  const headerName = new CreateEltment('.aside', 'h2', 'aside__head');
+  const navigation = new CreateEltment('.aside', 'div', 'navigation');
+  const resetBtn = new CreateEltment('.aside', 'button', 'reset-game');
+  const helpBtn = new CreateEltment('.aside', 'button', 'help-game');
+
   header.create();
   headerName.create('Levels');
   navigation.create();
   resetBtn.create('Reset game');
+  helpBtn.create('Help me!');
 
   levelsTask.forEach((value) => {
     const levels = new CreateEltment('.navigation', 'button', 'task');
-    // const complitedLevel = new CreateEltment(`.task-${value.level}`, 'span', 'checkmark');
     levels.create(value.level);
-    // complitedLevel.create();
   });
 }

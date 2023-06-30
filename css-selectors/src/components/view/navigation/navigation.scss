@@ -1,4 +1,4 @@
-.header {
+.aside {
   display: flex;
   flex-direction: column;
   order: 100;
@@ -28,7 +28,8 @@
 }
 
 .task,
-.reset-game {
+.reset-game,
+.help-game {
   padding: 5px 10px;
   margin: 2px 0px;
   border-radius: 5px;

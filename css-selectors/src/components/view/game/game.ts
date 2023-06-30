@@ -3,12 +3,12 @@ import { CreateEltment } from '../../classes/Create-element';
 
 export function createGame(): void {
   const main = new CreateEltment('body', 'main', 'main');
-  const about = new CreateEltment('main', 'div', 'about');
+  const header = new CreateEltment('main', 'header', 'header');
   const currentTask = new CreateEltment('main', 'div', 'current-task');
   const editor = new CreateEltment('main', 'div', 'editor');
 
   main.create();
-  about.create();
+  header.create('ssss');
   currentTask.create();
   editor.create();
 }
