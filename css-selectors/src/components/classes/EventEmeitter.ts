@@ -17,7 +17,8 @@ export class EventEmitter {
         while (gameRender?.firstChild) {
           gameRender.removeChild(gameRender.firstChild);
         }
-        createLevel('02');
+        EventEmitter.setLocalStorage(elem.innerText);
+        createLevel(elem.innerText);
       });
     }
   }

@@ -9,7 +9,6 @@ import levelsTask from './view/levels.json';
 export function startGame(): void {
   const game = document.querySelector('.current-task');
 
-  EventEmitter.setLocalStorage('01');
   const currentLevel = EventEmitter.getLocalStorage();
 
   levelsTask.forEach((value) => {
