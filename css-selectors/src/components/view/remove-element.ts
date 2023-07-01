@@ -3,4 +3,9 @@ export function removeElementPrevLevel(): void {
   while (gameRender?.firstChild) {
     gameRender.removeChild(gameRender.firstChild);
   }
+
+  const codeHtmlRender = document.querySelector('.editor__content');
+  while (codeHtmlRender?.firstChild) {
+    codeHtmlRender.removeChild(codeHtmlRender.firstChild);
+  }
 }

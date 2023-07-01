@@ -1,10 +1,6 @@
 import './editor-html.scss';
 import { CreateEltment } from '../../classes/Create-element';
-import levelsTask from '../levels.json';
-
-function getHtmlCode(levelNum: number): string {
-  return levelsTask[levelNum].html;
-}
+import { getHtmlCode } from '../get-html-code';
 
 export function createHtmlEditor(): void {
   const htmlEditor = new CreateEltment('.editor', 'div', 'editor__html');

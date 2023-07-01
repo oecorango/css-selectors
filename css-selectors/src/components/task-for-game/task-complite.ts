@@ -1,5 +1,6 @@
 import { DataStorage } from '../classes/Storage';
-import { removeElementPrevLevel } from '../view/removeElement';
+import { createHtmlEditor } from '../view/create-next_page';
+import { removeElementPrevLevel } from '../view/remove-element';
 import { storageAnswers } from './answers';
 import { createLevel } from './tasks';
 
@@ -26,6 +27,7 @@ export function corretAnswer(inputValue: string): void {
         console.log('You win!');
       } else {
         removeElementPrevLevel();
+        createHtmlEditor(nextLevel());
         DataStorage.setValue('level', nextLevel());
         createLevel(nextLevel());
       }

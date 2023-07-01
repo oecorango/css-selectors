@@ -1,7 +1,8 @@
 import { createLevel } from '../task-for-game/tasks';
 import { corretAnswer } from '../task-for-game/task-complite';
 import { DataStorage } from './Storage';
-import { removeElementPrevLevel } from '../view/removeElement';
+import { removeElementPrevLevel } from '../view/remove-element';
+import { createHtmlEditor } from '../view/create-next_page';
 
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
@@ -17,6 +18,7 @@ export class EventEmitter {
     if (elem) {
       elem.addEventListener('click', () => {
         removeElementPrevLevel();
+        createHtmlEditor(elem.innerText);
         this.setLocalStorage('level', elem.innerText);
         createLevel(elem.innerText);
         DataStorage.setValue('level', elem.innerText);
