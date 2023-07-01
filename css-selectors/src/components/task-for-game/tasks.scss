@@ -1,9 +1,9 @@
 .current-task {
   perspective-origin: 50% 100%;
   & > * {
-    width: 190px;
+    width: 192px;
     height: 270px;
-    margin-bottom: 110px;
+    margin-bottom: 120px;
     background-size: contain;
     @media (max-width: 800px) {
       width: 130px;
@@ -13,29 +13,50 @@
   }
 }
 
-.t-shirt,
-.pillow,
-.box, 
-.paper {
+.train,
+.car_1, 
+.car_2,
+.car_3 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.t-shirt {
-  background-image: url(../../assets/car1.png);
+.goofy,
+.mas,
+.mice {
+  height: 100%;
+  width: 100%;
+  background-size: contain;
 }
 
-.pillow {
+
+.train {
   background-image: url(../../assets/train.gif);
 }
 
-.box {
-  // background-image: url(../../assets/box.png);
+.car_1 {
+  background-image: url(../../assets/car1.png);
 }
 
-.paper {
-  // background-image: url(../../assets/paper.jpg);
+.car_2 {
+  background-image: url(../../assets/car2.png);
+}
+
+.car_3 {
+  background-image: url(../../assets/car3.png);
+}
+
+.goofy {
+  background-image: url(../../assets/goofy.png);
+}
+
+.mice {
+  background-image: url(../../assets/mice.png);
+}
+
+.mas {
+  background-image: url(../../assets/mas.png);
 }
 
 .strobe {
