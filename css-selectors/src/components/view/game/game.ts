@@ -8,7 +8,7 @@ export function createGame(): void {
   const editor = new CreateEltment('main', 'div', 'editor');
 
   main.create();
-  header.create('ssss');
+  header.create();
   currentTask.create();
   editor.create();
 }
