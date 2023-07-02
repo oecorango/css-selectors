@@ -36,19 +36,20 @@
   background-color: #747474;;
   color: #fff;
   &.task_current {
-    background-color: #7b7e51;
+    background-color: #23241f;
+    border: double 2px #fff;
     &:hover {
-      background-color: #7b7e51;
+      background-color: #23241f;
     }
   }
-  &.task_copmlite {
+  &.task_complete {
     background-color: #517e53;
     &:hover {
       background-color: #517e53;
     }
   }
   &:hover {
-    background-color: #353535;
+    background-color: #23241f;
   }
   transition: all .3s ease-out;
   @media (max-width: 1020px) {

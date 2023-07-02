@@ -3,6 +3,7 @@ import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { storageAnswers } from './answers';
+import { changeClass } from './change-class-elem';
 import { clearInputValue } from './clear-input';
 import { createLevel } from './tasks';
 
@@ -30,6 +31,9 @@ export function corretAnswer(inputValue: string): void {
       if (Number(next) > 10) {
         console.log('You win!');
       } else {
+        changeClass('task', 'remove', 'task_current', currentLevel);
+        changeClass('task', 'add', 'task_complete', currentLevel);
+        changeClass('task', 'add', 'task_current', nextLevel());
         removeElementPrevLevel();
         createHtmlEditor(nextLevel());
         highlightCode();
