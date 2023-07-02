@@ -1,6 +1,7 @@
 import { EventEmitter } from './classes/EventEmeitter';
 import { DataStorage } from './classes/Storage';
 import { createLevel } from './game/tasks';
+import { setFocus } from './view/set-focus';
 
 export function startGame(): void {
   const game = document.querySelector('.current-task');
@@ -19,7 +20,7 @@ export function startGame(): void {
 
   if (game?.children) createLevel(currentLevel);
 
-  const inputCss = document.querySelector('.input-css__code');
+  const getInputCss = setFocus();
   const btnEnter = document.querySelector('.button-css__code');
-  EventEmitter.getInputValue(inputCss as HTMLInputElement, btnEnter as HTMLElement);
+  EventEmitter.getInputValue(getInputCss, btnEnter as HTMLElement);
 }

@@ -5,6 +5,7 @@ import { removeElementPrevLevel } from '../view/remove-element';
 import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
 import { changeClass } from '../game/change-class-for-elem';
+import { setFocus } from '../view/set-focus';
 
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
@@ -16,7 +17,7 @@ export class EventEmitter {
     }
   }
 
-  public static onClickButton(elem: HTMLElement | null /* , func: ToogleClassName */): void {
+  public static onClickButton(elem: HTMLElement | null): void {
     if (elem) {
       elem.addEventListener('click', () => {
         removeElementPrevLevel();
@@ -26,7 +27,7 @@ export class EventEmitter {
         createLevel(elem.innerText);
         DataStorage.setValue('level', elem.innerText);
         changeClass('task', 'remove', 'task_current');
-
+        setFocus();
         elem.classList.add('task_current');
         this.setLocalStorage('current-level', elem.innerText);
       });

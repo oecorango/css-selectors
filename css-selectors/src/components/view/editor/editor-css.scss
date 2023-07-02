@@ -60,6 +60,13 @@
   font-weight: bold;
   margin-right: 5%;
   width: 60%;
+  border-radius: 5px;
+  animation: flicker .6s infinite;
+}
+
+.anim {
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 .button-css__code{
@@ -69,6 +76,20 @@
 
 .shake {
   animation: shake .1s 4;
+}
+
+@keyframes flicker {
+  0% {
+    background-color: #dfdfdf;
+  }
+
+  50% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: #dfdfdf;
+  }
 }
 
 @keyframes shake {
