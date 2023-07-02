@@ -22,6 +22,7 @@
   align-items: center;
 }
 
+.horse,
 .goofy,
 .mas,
 .mice {
@@ -48,6 +49,14 @@
 .car_3 {
   background-image: url(../../assets/car3.png);
   // filter: drop-shadow(0 0 6px #436cf3);
+}
+
+.car_horse {
+  background-image: url(../../assets/car-horse.png);
+}
+
+.horse {
+  background-image: url(../../assets/horse.png);
 }
 
 .goofy {

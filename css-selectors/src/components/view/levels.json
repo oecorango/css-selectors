@@ -16,12 +16,12 @@
   },
   {
     "level": "04",
-    "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"train\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;horse /&gt;\n  &lt;vagon&gt; \n    &lt;horse /&gt; \n  &lt;/vagon&gt;\n  &lt;car /&gt;\n&lt;/div&gt;</code></pre>",
     "сode": ""
   },
   {
     "level": "05",
-    "html": "<pre class='code__html'><code class='html'>&lt;tabel class=\"train\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;\n&lt;tabel class=\"tabel\"&gt;\n  &lt;apple&gt;&lt;/apple&gt;\n&lt;/tabel&gt;</code></pre>",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;car id=\"music\"&gt;\n    &lt;masyanya /&gt;\n  &lt;vagon&gt;\n    &lt;masyanya /&gt; \n  &lt;/vagon&gt;\n  &lt;car&gt;\n    &lt;goofy /&gt;\n  &lt;/car&gt;\n&lt;/div&gt;</code></pre>",
     "сode": ""
   },
   {
