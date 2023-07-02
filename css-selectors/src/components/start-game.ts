@@ -1,6 +1,6 @@
 import { EventEmitter } from './classes/EventEmeitter';
 import { DataStorage } from './classes/Storage';
-import { createLevel } from './task-for-game/tasks';
+import { createLevel } from './game/tasks';
 
 export function startGame(): void {
   const game = document.querySelector('.current-task');

@@ -1,4 +1,4 @@
-import { CreateEltment } from '../classes/Create-element';
+import { CreateEltment } from '../../classes/Create-element';
 
 export function createLevel05(): void {
   const elem1 = new CreateEltment('.current-task', 'div', 'car_3');

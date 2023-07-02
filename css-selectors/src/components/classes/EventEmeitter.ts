@@ -1,5 +1,5 @@
-import { createLevel } from '../task-for-game/tasks';
-import { corretAnswer } from '../task-for-game/task-complite';
+import { createLevel } from '../game/tasks';
+import { corretAnswer } from '../game/task-complite';
 import { DataStorage } from './Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { createHtmlEditor } from '../view/create-next_page';
