@@ -3,7 +3,7 @@ import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { storageAnswers } from './answers';
-import { changeClass } from './change-class-elem';
+import { changeClass } from './change-class-for-elem';
 import { clearInputValue } from './clear-input';
 import { createLevel } from './tasks';
 

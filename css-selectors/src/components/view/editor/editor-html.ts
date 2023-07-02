@@ -2,6 +2,7 @@ import './editor-html.scss';
 import { CreateEltment } from '../../classes/Create-element';
 import { getHtmlCode } from '../get-html-code';
 import { highlightCode } from '../highlight-code';
+import { EventEmitter } from '../../classes/EventEmeitter';
 
 export function createHtmlEditor(): void {
   const htmlEditor = new CreateEltment('.editor', 'div', 'editor__html');
@@ -14,9 +15,11 @@ export function createHtmlEditor(): void {
   const htmlStr = new CreateEltment('.editor__content', 'div', 'editor__str');
   const htmlCode = new CreateEltment('.editor__content', 'div', 'editor__code');
 
+  const saveLevel = EventEmitter.getLocalStorage('level');
+
   htmlEditor.create();
   editorContent.create();
-  htmlCode.create(getHtmlCode(0));
+  htmlCode.create(getHtmlCode(Number(saveLevel) - 1));
   highlightCode();
   htmlStr.create('1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15');
   htmlHeader.create();

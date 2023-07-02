@@ -4,7 +4,7 @@ import { DataStorage } from './Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
-import { changeClass } from '../game/change-class-elem';
+import { changeClass } from '../game/change-class-for-elem';
 
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
