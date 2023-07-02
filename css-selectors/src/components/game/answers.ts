@@ -1,7 +1,7 @@
 export const storageAnswers = [
-  'short',
-  'blll',
-  'zfff',
+  'car',
+  'vagon',
+  '#music',
   'ssdff',
   'ssdff',
   'webwor',
