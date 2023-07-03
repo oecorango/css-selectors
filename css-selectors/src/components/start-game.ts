@@ -9,7 +9,7 @@ export function startGame(): void {
   const currentLevel = EventEmitter.getLocalStorage('level');
   DataStorage.setValue('level', currentLevel);
 
-  const buttons: NodeListOf<HTMLElement> = document.querySelectorAll(`.task`);
+  const buttons: NodeListOf<HTMLElement> = document.querySelectorAll('button');
   buttons.forEach((btn) => {
     if (btn.innerText === currentLevel) btn.classList.add('task_current');
   });

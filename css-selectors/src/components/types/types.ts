@@ -1,1 +1,1 @@
-type ToogleClassName = (elem: HTMLElement, name: string) => string;
+export type SetTimeout = (str: string, num: number) => void;

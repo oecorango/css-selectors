@@ -7,6 +7,8 @@ import { highlightCode } from '../view/highlight-code';
 import { changeClass } from '../game/change-class-for-elem';
 import { setFocus } from '../view/set-focus';
 import { nextLevelNum } from '../game/next-level';
+import { getHint } from '../game/get-hint';
+import { clearInputValue } from '../game/clear-input';
 
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
@@ -21,16 +23,25 @@ export class EventEmitter {
   public static onClickButton(elem: HTMLElement | null): void {
     if (elem) {
       elem.addEventListener('click', () => {
-        removeElementPrevLevel();
-        createHtmlEditor(elem.innerText);
-        highlightCode();
-        this.setLocalStorage('level', elem.innerText);
-        createLevel(elem.innerText);
-        DataStorage.setValue('level', elem.innerText);
-        changeClass('task', 'remove', 'task_current');
-        setFocus();
-        elem.classList.add('task_current');
-        this.setLocalStorage('current-level', elem.innerText);
+        if (elem.classList.contains('help-game')) {
+          this.setInputValue();
+          setFocus();
+        }
+        if (elem.classList.contains('reset-game')) console.log('res');
+        if (elem.classList.contains('button-css__code')) console.log('ent');
+        if (elem.classList.contains('task')) {
+          clearInputValue();
+          removeElementPrevLevel();
+          createHtmlEditor(elem.innerText);
+          highlightCode();
+          this.setLocalStorage('level', elem.innerText);
+          createLevel(elem.innerText);
+          DataStorage.setValue('level', elem.innerText);
+          changeClass('task', 'remove', 'task_current');
+          setFocus();
+          elem.classList.add('task_current');
+          this.setLocalStorage('current-level', elem.innerText);
+        }
       });
     }
   }
@@ -45,8 +56,8 @@ export class EventEmitter {
     return levels;
   }
 
-  public static setInputValue(str: string): void {
-    // console.log('object');
+  public static setInputValue(): void {
+    getHint();
   }
 
   public static getInputValue(input: HTMLInputElement | null, button: HTMLElement | null): void {
