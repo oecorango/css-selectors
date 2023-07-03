@@ -9,6 +9,7 @@ import { setFocus } from '../view/set-focus';
 import { nextLevelNum } from '../game/next-level';
 import { getHint } from '../game/get-hint';
 import { clearInputValue } from '../game/clear-input';
+import { resetGame } from '../game/reset-game';
 
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
@@ -27,8 +28,14 @@ export class EventEmitter {
           this.setInputValue();
           setFocus();
         }
-        if (elem.classList.contains('reset-game')) console.log('res');
-        if (elem.classList.contains('button-css__code')) console.log('ent');
+        if (elem.classList.contains('reset-game')) {
+          resetGame();
+          this.setLocalStorage('level', '01');
+          this.setLocalStorage('current-level', '01');
+          createHtmlEditor('01');
+          highlightCode();
+          changeClass('task', 'add', 'task_current', '01');
+        }
         if (elem.classList.contains('task')) {
           clearInputValue();
           removeElementPrevLevel();
