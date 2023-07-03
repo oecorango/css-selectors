@@ -9,6 +9,7 @@ import { createLevel } from './tasks';
 
 export function corretAnswer(inputValue: string): void {
   const currentLevel = DataStorage.getValue('level');
+
   const nextLevel = (): string =>
     Number(currentLevel) < 9 ? `0${Number(currentLevel) + 1}` : (Number(currentLevel) + 1).toString();
 
