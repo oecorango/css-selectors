@@ -71,6 +71,7 @@ export class EventEmitter {
     if (input) {
       input.addEventListener('keydown', (event) => {
         if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+          this.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
           const nextLevel = nextLevelNum();
 
           this.setLocalStorage('level', nextLevel);
@@ -80,6 +81,7 @@ export class EventEmitter {
 
       if (button) {
         button.addEventListener('click', () => {
+          this.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
           const nextLevel = nextLevelNum();
           setFocus();
 

@@ -1,9 +1,11 @@
 import { EventEmitter } from './classes/EventEmeitter';
 import { DataStorage } from './classes/Storage';
+import { loadProgress } from './game/load-game-progress';
 import { createLevel } from './game/tasks';
 import { setFocus } from './view/set-focus';
 
 export function startGame(): void {
+  loadProgress();
   const game = document.querySelector('.current-task');
 
   const currentLevel = EventEmitter.getLocalStorage('level');
