@@ -16,7 +16,8 @@
 .train,
 .car_1, 
 .car_2,
-.car_3 {
+.car_3,
+.null {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +32,13 @@
   background-size: contain;
 }
 
+.small-mice,
+.small-mas,
+.small-horse {
+  height: 75%;
+  width: 75%;
+  background-size: contain;
+}
 
 .train {
   background-image: url(../../assets/train.gif);
@@ -55,7 +63,8 @@
   background-image: url(../../assets/car-horse.png);
 }
 
-.horse {
+.horse,
+.small-horse {
   background-image: url(../../assets/horse.png);
 }
 
@@ -63,12 +72,19 @@
   background-image: url(../../assets/goofy.png);
 }
 
-.mice {
+.mice,
+.small-mice {
   background-image: url(../../assets/mice.png);
 }
 
-.mas {
+.mas,
+.small-mas {
   background-image: url(../../assets/mas.png);
+}
+
+.small-mas {
+  margin-top: 265px;
+  margin-left: 50px;
 }
 
 .strobe {
