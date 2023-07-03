@@ -1,3 +1,4 @@
+import { CreateEltment } from '../classes/Create-element';
 import { DataStorage } from '../classes/Storage';
 import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
@@ -30,7 +31,8 @@ export function corretAnswer(inputValue: string): void {
       clearInputValue();
 
       if (Number(next) > 10) {
-        console.log('You win!');
+        const winGame = new CreateEltment('main', 'div', 'modal');
+        winGame.create('You WIN!!!');
       } else {
         changeClass('task', 'remove', 'task_current', currentLevel);
         changeClass('task', 'add', 'task_complete', currentLevel);

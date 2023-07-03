@@ -92,6 +92,27 @@
   animation-delay: 0s, .5s;
 }
 
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 4rem;
+  text-align: center;
+  border: solid 3px #fff;;
+  border-radius: 5px;
+  height: 10%;
+  width: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+  }
+}
+
 @keyframes strobe {
   0% { transform:
     skew(4deg, 0deg)

@@ -6,6 +6,7 @@ import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
 import { changeClass } from '../game/change-class-for-elem';
 import { setFocus } from '../view/set-focus';
+import { nextLevelNum } from '../game/next-level';
 
 export class EventEmitter {
   public static mouseover(elem: HTMLElement | null): void {
@@ -51,21 +52,20 @@ export class EventEmitter {
   public static getInputValue(input: HTMLInputElement | null, button: HTMLElement | null): void {
     if (input) {
       input.addEventListener('keydown', (event) => {
-        const currentLevel = DataStorage.getValue('level');
-        const nextLevel = (): string =>
-          Number(currentLevel) < 9 ? `0${Number(currentLevel) + 1}` : (Number(currentLevel) + 1).toString();
         if (event.code === 'Enter' || event.code === 'NumpadEnter') {
-          this.setLocalStorage('level', nextLevel());
+          const nextLevel = nextLevelNum();
+
+          this.setLocalStorage('level', nextLevel);
           corretAnswer(input.value);
         }
       });
 
       if (button) {
         button.addEventListener('click', () => {
-          const currentLevel = DataStorage.getValue('level');
-          const nextLevel = (): string =>
-            Number(currentLevel) < 9 ? `0${Number(currentLevel) + 1}` : (Number(currentLevel) + 1).toString();
-          this.setLocalStorage('level', nextLevel());
+          const nextLevel = nextLevelNum();
+          setFocus();
+
+          this.setLocalStorage('level', nextLevel);
           corretAnswer(input.value);
         });
       }

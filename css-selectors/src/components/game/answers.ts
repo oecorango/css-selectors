@@ -6,7 +6,7 @@ export const storageAnswers = [
   '#music masyanya',
   '.small',
   'mice.small',
-  'sdfa',
-  'sdfffaa',
-  'sddfasdf',
+  '1',
+  '1',
+  '1',
 ];

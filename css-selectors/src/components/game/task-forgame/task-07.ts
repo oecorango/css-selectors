@@ -5,7 +5,7 @@ export function createLevel07(): void {
   const elem2 = new CreateEltment('.current-task', 'div', 'car_2');
   const elem3 = new CreateEltment('.current-task', 'div', 'car_3');
   const elem4 = new CreateEltment('.current-task', 'div', 'train');
-  const nestedElem1 = new CreateEltment('.null', 'div', 'small-mas', 'strobe');
+  const nestedElem1 = new CreateEltment('.null', 'div', 'small-mas');
   const nestedElem2 = new CreateEltment('.car_2', 'div', 'mice');
   const nestedElem3 = new CreateEltment('.car_3', 'div', 'small-mice', 'strobe');
 
