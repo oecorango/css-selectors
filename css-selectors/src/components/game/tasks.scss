@@ -1,14 +1,21 @@
 .current-task {
-  perspective-origin: 50% 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   & > * {
     width: 192px;
     height: 270px;
     margin-bottom: 120px;
     background-size: contain;
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       width: 130px;
-      height: 255px;
-      margin-bottom: 40px;
+      height: 185px;
+      margin-bottom: 120px;
+    }
+    @media (max-width: 620px) {
+      width: 105px;
+      height: 150px;
+      margin-bottom: 120px;
+      background-size: contain;
     }
   }
 }
@@ -35,11 +42,26 @@
 }
 
 .small-mice,
-.small-mas,
 .small-horse {
   height: 75%;
   width: 75%;
   background-size: contain;
+}
+
+.small-mas {
+  height: 75%;
+  width: 75%;
+  background-size: contain;
+  @media (max-width: 900px) {
+    width: 105px;
+    height: 110px;
+    margin-bottom: 90px;
+  }
+  @media (max-width: 620px) {
+    width: 50px;
+    height: 70px;
+    margin-bottom: 120px;
+  }
 }
 
 .train {
@@ -50,6 +72,9 @@
   background-image: url(../../assets/car1.png);
   & .small-mas {
     margin-bottom: 250px;
+    @media (max-width: 620px) {
+      margin-bottom: 275px;
+    }
   }
   // filter: drop-shadow(0 0 6px #436cf3);
 }
@@ -60,6 +85,9 @@
   background-image: url(../../assets/car2.png);
   & .small-mas {
     margin-bottom: 250px;
+    @media (max-width: 620px) {
+      margin-bottom: 275px;
+    }
   }
   // filter: drop-shadow(0 0 6px #436cf3);
 }

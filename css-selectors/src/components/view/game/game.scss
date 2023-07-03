@@ -4,6 +4,9 @@
   width: 75%;
   flex-direction: column;
   order: 10;
+  @media (max-width: 1080px) {
+    width: 80%;
+  }
   @media (max-width: 1020px) {
     width: 90%;
   }
