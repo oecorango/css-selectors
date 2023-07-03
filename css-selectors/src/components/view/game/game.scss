@@ -10,8 +10,15 @@
 }
 
 .header {
+  display: flex;
+  justify-content: space-around;
   height: 6%;
-  background-color: black;
+  background-color: #494949;
+  color: #fff;
+  & .header__text {
+    margin: 0;
+    padding: 1%;
+  }
 }
 
 .current-task {
@@ -22,4 +29,33 @@
   font-size: 2rem;
   background-image: url(../../../assets/background.png);
   background-size: 100% 100%;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.rs-school {
+  height: 50px;
+  width: 100px;
+  & a {
+    display: block;
+    background-image: url(../../../assets/ico/rs_school.svg);
+    background-size: contain;
+    height: 50px;
+  }
+}
+
+.github {
+  height: 45px;
+  width: 45px;
+  & a {
+    display: block;
+    background-image: url(../../../assets/ico/github.svg);
+    background-size: contain;
+    height: 45px;
+  }
 }
