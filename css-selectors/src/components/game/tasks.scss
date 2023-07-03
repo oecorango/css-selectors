@@ -16,6 +16,8 @@
 .train,
 .car_1, 
 .car_2,
+.car_21,
+.csr_22,
 .car_3,
 .null {
   display: flex;
@@ -46,11 +48,19 @@
 
 .car_1 {
   background-image: url(../../assets/car1.png);
+  & .small-mas {
+    margin-bottom: 250px;
+  }
   // filter: drop-shadow(0 0 6px #436cf3);
 }
 
-.car_2 {
+.car_2,
+.car_21,
+.car_22 {
   background-image: url(../../assets/car2.png);
+  & .small-mas {
+    margin-bottom: 250px;
+  }
   // filter: drop-shadow(0 0 6px #436cf3);
 }
 
