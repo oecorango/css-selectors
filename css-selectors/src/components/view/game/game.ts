@@ -1,6 +1,6 @@
 import './game.scss';
 import { CreateEltment } from '../../classes/Create-element';
-import { createLinks } from './create-links';
+import { createLinks } from '../create-links';
 
 export function createGame(): void {
   const main = new CreateEltment('body', 'main', 'main');

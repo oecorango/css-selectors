@@ -1,7 +1,6 @@
 import './navigation.scss';
 import { CreateEltment } from '../../classes/Create-element';
 import levelsTask from '../levels.json';
-// import { EventEmitter } from '../../classes/EventEmeitter';
 
 export function createNavigation(): void {
   const header = new CreateEltment('body', 'aside', 'aside');

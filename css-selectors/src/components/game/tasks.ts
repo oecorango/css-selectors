@@ -1,14 +1,16 @@
 import './tasks.scss';
-import { createLevel01 } from './task-forgame/task-01';
-import { createLevel02 } from './task-forgame/task-02';
-import { createLevel03 } from './task-forgame/task-03';
-import { createLevel04 } from './task-forgame/task-04';
-import { createLevel05 } from './task-forgame/task-05';
-import { createLevel06 } from './task-forgame/task-06';
-import { createLevel07 } from './task-forgame/task-07';
-import { createLevel08 } from './task-forgame/task-08';
-import { createLevel09 } from './task-forgame/task-09';
-import { createLevel10 } from './task-forgame/task-10';
+import {
+  createLevel01,
+  createLevel02,
+  createLevel03,
+  createLevel04,
+  createLevel05,
+  createLevel06,
+  createLevel07,
+  createLevel08,
+  createLevel09,
+  createLevel10,
+} from './level-for-game';
 
 export function createLevel(levelNum: string | null): void {
   if (levelNum === null || levelNum === '01') createLevel01();

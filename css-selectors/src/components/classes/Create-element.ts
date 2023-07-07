@@ -16,7 +16,6 @@ export class CreateEltment {
 
   public create(code?: string): void {
     const parent = document.querySelector(this.parent);
-
     const createElem = document.createElement(this.tag);
 
     if (this.attribute) {
@@ -24,7 +23,6 @@ export class CreateEltment {
     }
 
     createElem.classList.add(this.name);
-
     if (code) {
       createElem.innerHTML = code;
     }

@@ -5,7 +5,7 @@ export function winGame(): void {
 
   const buttons: NodeListOf<HTMLElement> = document.querySelectorAll('button');
   buttons.forEach((btn) => {
-    if (btn.classList.contains('task_complete')) levelComplite += 1;
+    if (btn.classList.contains('task_complete') || btn.classList.contains('task_help')) levelComplite += 1;
   });
 
   if (levelComplite === 9) {

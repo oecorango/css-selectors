@@ -23,6 +23,6 @@ export function startGame(): void {
   if (game?.children) createLevel(currentLevel);
 
   const getInputCss = setFocus();
-  const btnEnter = document.querySelector('.button-css__code');
-  EventEmitter.getInputValue(getInputCss, btnEnter as HTMLElement);
+  const btnEnter: HTMLElement | null = document.querySelector('.button-css__code');
+  EventEmitter.getInputValue(getInputCss, btnEnter);
 }

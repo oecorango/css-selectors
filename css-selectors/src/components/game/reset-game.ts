@@ -11,8 +11,8 @@ export function resetGame(): void {
 
   localStorageItem.map((el) => localStorage.removeItem(`level-${el}`));
 
-  const gameRender = document.querySelector('.modal');
-  gameRender?.remove();
+  const gameIsWin = document.querySelector('.modal');
+  gameIsWin?.remove();
 
   changeClass('task', 'remove', 'task_current');
   changeClass('task', 'remove', 'task_complete');
