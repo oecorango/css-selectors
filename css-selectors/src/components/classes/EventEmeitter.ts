@@ -2,7 +2,7 @@ import { createLevel } from '../game/level-for-game';
 import { corretAnswer } from '../game/task-complite';
 import { DataStorage } from './Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
-import { createHtmlEditor } from '../view/create-next-html-editor';
+import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
 import { changeClass } from '../game/change-class-for-elem';
 import { setFocus } from '../view/set-focus';
