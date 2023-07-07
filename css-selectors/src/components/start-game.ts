@@ -3,6 +3,7 @@ import { DataStorage } from './classes/Storage';
 import { loadProgress } from './game/load-game-progress';
 import { createLevel } from './game/level-for-game';
 import { setFocus } from './view/set-focus';
+import { highlightElement } from './game/highlight-hovered';
 
 export function startGame(): void {
   loadProgress();
@@ -25,4 +26,6 @@ export function startGame(): void {
   const getInputCss = setFocus();
   const btnEnter: HTMLElement | null = document.querySelector('.button-css__code');
   EventEmitter.getInputValue(getInputCss, btnEnter);
+
+  highlightElement();
 }

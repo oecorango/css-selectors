@@ -26,10 +26,14 @@
 .car_21,
 .csr_22,
 .car_3,
+.car_horse,
 .null {
   display: flex;
   justify-content: center;
   align-items: center;
+  &.highlight {
+    filter: drop-shadow(0 0 6px #436cf3);
+  }
 }
 
 .horse,
@@ -39,6 +43,9 @@
   height: 100%;
   width: 100%;
   background-size: contain;
+  &.highlight {
+    filter: drop-shadow(0 0 6px #436cf3);
+  }
 }
 
 .small-mice,
@@ -46,6 +53,9 @@
   height: 75%;
   width: 75%;
   background-size: contain;
+  & .highlight {
+    filter: drop-shadow(0 0 6px #436cf3);
+  }
 }
 
 .small-mas {
@@ -76,7 +86,6 @@
       margin-bottom: 275px;
     }
   }
-  // filter: drop-shadow(0 0 6px #436cf3);
 }
 
 .car_2,
@@ -89,12 +98,10 @@
       margin-bottom: 275px;
     }
   }
-  // filter: drop-shadow(0 0 6px #436cf3);
 }
 
 .car_3 {
   background-image: url(../../assets/car3.png);
-  // filter: drop-shadow(0 0 6px #436cf3);
 }
 
 .car_horse {

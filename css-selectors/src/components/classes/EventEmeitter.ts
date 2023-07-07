@@ -2,7 +2,7 @@ import { createLevel } from '../game/level-for-game';
 import { corretAnswer } from '../game/task-complite';
 import { DataStorage } from './Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
-import { createHtmlEditor } from '../view/create-next_page';
+import { createHtmlEditor } from '../view/create-next-html-editor';
 import { highlightCode } from '../view/highlight-code';
 import { changeClass } from '../game/change-class-for-elem';
 import { setFocus } from '../view/set-focus';
@@ -12,11 +12,23 @@ import { clearInputValue } from '../game/clear-input';
 import { resetGame } from '../game/reset-game';
 
 export class EventEmitter {
-  public static mouseover(elem: HTMLElement | null): void {
-    if (elem) {
-      elem.addEventListener('mouseover', () => {
-        // console.log('1233');
-        // elem.classList.add('aaa');
+  private elems: Element[] | null;
+
+  constructor(elems: Element[] | null) {
+    this.elems = elems;
+  }
+
+  public mouseover(): void {
+    if (this.elems) {
+      this.elems.forEach((element) => {
+        element.addEventListener('mouseover', () => {
+          element.classList.add('highlight');
+        });
+      });
+      this.elems.forEach((element) => {
+        element.addEventListener('mouseout', () => {
+          element.classList.remove('highlight');
+        });
       });
     }
   }

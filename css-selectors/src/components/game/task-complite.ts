@@ -1,5 +1,5 @@
 import { DataStorage } from '../classes/Storage';
-import { createHtmlEditor } from '../view/create-next_page';
+import { createHtmlEditor } from '../view/create-next-html-editor';
 import { highlightCode } from '../view/highlight-code';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { storageAnswers } from './answers';
