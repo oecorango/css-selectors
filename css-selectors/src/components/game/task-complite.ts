@@ -5,7 +5,7 @@ import { removeElementPrevLevel } from '../view/remove-element';
 import { storageAnswers } from './answers';
 import { changeClass } from './change-class-for-elem';
 import { clearInputValue } from './clear-input';
-import { createLevel } from './tasks';
+import { createLevel } from './level-for-game';
 import { winGame } from './win-game';
 
 export function corretAnswer(inputValue: string): void {

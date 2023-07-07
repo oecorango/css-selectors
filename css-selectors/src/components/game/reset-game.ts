@@ -1,7 +1,7 @@
 import { DataStorage } from '../classes/Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { changeClass } from './change-class-for-elem';
-import { createLevel } from './tasks';
+import { createLevel } from './level-for-game';
 
 const localStorageItem = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
 
