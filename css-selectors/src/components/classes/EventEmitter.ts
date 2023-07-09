@@ -18,7 +18,7 @@ export class EventEmitter {
     this.elems = elems;
   }
 
-  public mouseover(): void {
+  public mouseOverOut(): void {
     if (this.elems) {
       this.elems.forEach((element) => {
         element.addEventListener('mouseover', () => {
@@ -37,7 +37,7 @@ export class EventEmitter {
     if (elem) {
       elem.addEventListener('click', () => {
         if (elem.classList.contains('help-game')) {
-          this.setInputValue();
+          getHint();
           setFocus();
         }
         if (elem.classList.contains('reset-game')) {
@@ -73,10 +73,6 @@ export class EventEmitter {
     const levels: string | null = localStorage.getItem(name);
     if (levels === null) return '01';
     return levels;
-  }
-
-  public static setInputValue(): void {
-    getHint();
   }
 
   public static getInputValue(input: HTMLInputElement | null, button: HTMLElement | null): void {

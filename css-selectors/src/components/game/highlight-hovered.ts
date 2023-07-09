@@ -5,6 +5,6 @@ export function highlightElement(): void {
   if (elem) {
     const children = Array.from(elem.getElementsByTagName('*'));
     const event = new EventEmitter(children);
-    event.mouseover();
+    event.mouseOverOut();
   }
 }
