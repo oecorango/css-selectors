@@ -1,9 +1,9 @@
-export function printTimeOut(stringToPrint: string, charNumberString: number): void {
+export function printTimeOut(stringToPrint: string, startPrintNumber: number): void {
   const input: HTMLInputElement | null = document.querySelector('.input-css__code');
 
-  if (input && charNumberString < stringToPrint.length) {
-    input.value = stringToPrint.substring(0, charNumberString + 1);
-    const newCharNumber = charNumberString + 1;
+  if (input && startPrintNumber < stringToPrint.length) {
+    input.value = stringToPrint.substring(0, startPrintNumber + 1);
+    const newCharNumber = startPrintNumber + 1;
     setTimeout(() => {
       printTimeOut(stringToPrint, newCharNumber);
     }, 100);
