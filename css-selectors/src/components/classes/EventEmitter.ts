@@ -10,6 +10,7 @@ import { nextLevelNum } from '../game/next-level';
 import { getHint } from '../game/get-hint';
 import { clearInputValue } from '../game/clear-input';
 import { resetGame } from '../game/reset-game';
+import { NEW_GAME_LEVEL } from '../utils/constants';
 
 export class EventEmitter {
   private elems: Element[] | null;
@@ -42,11 +43,11 @@ export class EventEmitter {
         }
         if (elem.classList.contains('reset-game')) {
           resetGame();
-          DataStorage.setLocalStorage('level', '01');
-          DataStorage.setLocalStorage('current-level', '01');
-          createHtmlEditor('01');
+          DataStorage.setLocalStorage('level', NEW_GAME_LEVEL);
+          DataStorage.setLocalStorage('current-level', NEW_GAME_LEVEL);
+          createHtmlEditor(NEW_GAME_LEVEL);
           highlightCode();
-          changeClass('task', 'add', 'task_current', '01');
+          changeClass('task', 'add', 'task_current', NEW_GAME_LEVEL);
         }
         if (elem.classList.contains('task')) {
           clearInputValue();
@@ -69,7 +70,7 @@ export class EventEmitter {
     if (input) {
       input.addEventListener('keydown', (event) => {
         if (event.code === 'Enter' || event.code === 'NumpadEnter') {
-          DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
+          DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complete');
           const nextLevel = nextLevelNum();
 
           DataStorage.setLocalStorage('level', nextLevel);
@@ -79,7 +80,7 @@ export class EventEmitter {
 
       if (button) {
         button.addEventListener('click', () => {
-          DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
+          DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complete');
           const nextLevel = nextLevelNum();
           setFocus();
 

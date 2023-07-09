@@ -2,14 +2,13 @@ import { DataStorage } from '../classes/Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { changeClass } from './change-class-for-elem';
 import { createLevel } from './level-for-game';
-
-const localStorageItem = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
+import { NEW_GAME_LEVEL, LOCAL_STORAGE_ITEM } from '../utils/constants';
 
 export function resetGame(): void {
-  DataStorage.setValue('level', '01');
+  DataStorage.setValue('level', NEW_GAME_LEVEL);
   removeElementPrevLevel();
 
-  localStorageItem.map((el) => localStorage.removeItem(`level-${el}`));
+  LOCAL_STORAGE_ITEM.map((el) => localStorage.removeItem(`level-${el}`));
 
   const gameIsWin = document.querySelector('.modal');
   gameIsWin?.remove();

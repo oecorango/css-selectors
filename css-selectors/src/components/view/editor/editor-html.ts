@@ -3,8 +3,7 @@ import { createElement } from '../../utils/create-element';
 import { getHtmlCode } from '../get-html-code';
 import { highlightCode } from '../highlight-code';
 import { DataStorage } from '../../classes/Storage';
-
-const htmlCodeColumn = '1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15';
+import { CODE_EDITOR_COLUMN } from '../../utils/constants';
 
 export function createHtmlEditor(): void {
   createElement('.editor', 'div', 'editor__html');
@@ -13,7 +12,7 @@ export function createHtmlEditor(): void {
   createElement('.editor-html__header', 'div', 'editor__value', 'table.html');
 
   createElement('.editor__html', 'div', 'editor__content');
-  createElement('.editor__content', 'div', 'editor__str', htmlCodeColumn);
+  createElement('.editor__content', 'div', 'editor__str', CODE_EDITOR_COLUMN);
 
   const saveLevel = DataStorage.getLocalStorage('level');
   createElement('.editor__content', 'div', 'editor__code', getHtmlCode(Number(saveLevel) - 1));

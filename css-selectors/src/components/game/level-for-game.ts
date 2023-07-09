@@ -1,5 +1,6 @@
 import './level-for-game.scss';
 import { createElement } from '../utils/create-element';
+import { NEW_GAME_LEVEL } from '../utils/constants';
 
 function createLevel01(): void {
   createElement('.current-task', 'div', 'car_3', '', 'strobe');
@@ -91,7 +92,7 @@ function createLevel10(): void {
 }
 
 export function createLevel(levelNum: string | null): void {
-  if (levelNum === null || levelNum === '01') createLevel01();
+  if (levelNum === null || levelNum === NEW_GAME_LEVEL) createLevel01();
   if (levelNum === '02') createLevel02();
   if (levelNum === '03') createLevel03();
   if (levelNum === '04') createLevel04();

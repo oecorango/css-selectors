@@ -1,3 +1,5 @@
+import { NEW_GAME_LEVEL } from '../utils/constants';
+
 export class DataStorage {
   private static items = new Map<string, string>();
 
@@ -18,7 +20,7 @@ export class DataStorage {
 
   public static getLocalStorage(name: string): string {
     const levels: string | null = localStorage.getItem(name);
-    if (levels === null) return '01';
+    if (levels === null) return NEW_GAME_LEVEL;
     return levels;
   }
 }
