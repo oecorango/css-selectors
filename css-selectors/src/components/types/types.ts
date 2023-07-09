@@ -1,1 +1,7 @@
-export type SetTimeout = (str: string, num: number) => void;
+// export type CreateElement = (
+//   parentElement: string,
+//   tag: string,
+//   className: string,
+//   innerHTML?: string,
+//   secondClassName?: string,
+// ) => void;

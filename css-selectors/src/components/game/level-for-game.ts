@@ -1,123 +1,93 @@
 import './level-for-game.scss';
-import { CreateElement } from '../classes/Create-element';
+import { createElement } from '../utils/create-element';
 
 function createLevel01(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_3', 'strobe');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_3', 'strobe');
-  const elem3 = new CreateElement('.current-task', 'div', 'train');
-
-  const arrElem = [elem1, elem2, elem3];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_3', '', 'strobe');
+  createElement('.current-task', 'div', 'car_3', '', 'strobe');
+  createElement('.current-task', 'div', 'train');
 }
 
 function createLevel02(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_2', 'strobe');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_3');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_2', 'strobe');
-  const elem4 = new CreateElement('.current-task', 'div', 'train');
-
-  const arrElem = [elem1, elem2, elem3, elem4];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_2', '', 'strobe');
+  createElement('.current-task', 'div', 'car_3');
+  createElement('.current-task', 'div', 'car_2', '', 'strobe');
+  createElement('.current-task', 'div', 'train');
 }
 
 function createLevel03(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_3');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_1', 'strobe');
-  const elem4 = new CreateElement('.current-task', 'div', 'train');
-
-  const arrElem = [elem1, elem2, elem3, elem4];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_3');
+  createElement('.current-task', 'div', 'car_2');
+  createElement('.current-task', 'div', 'car_1', '', 'strobe');
+  createElement('.current-task', 'div', 'train');
 }
 
 function createLevel04(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_horse');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_3');
-  const elem4 = new CreateElement('.current-task', 'div', 'train');
-  const nestedElem1 = new CreateElement('.car_2', 'div', 'horse', 'strobe');
-
-  const arrElem = [elem1, elem2, elem3, elem4, nestedElem1];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_horse');
+  createElement('.current-task', 'div', 'car_2');
+  createElement('.current-task', 'div', 'car_3');
+  createElement('.current-task', 'div', 'train');
+  createElement('.car_2', 'div', 'horse', '', 'strobe');
 }
 
 function createLevel05(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_1');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_3');
-  const elem4 = new CreateElement('.current-task', 'div', 'train');
-  const nestedElem1 = new CreateElement('.car_1', 'div', 'mas', 'strobe');
-  const nestedElem2 = new CreateElement('.car_2', 'div', 'mas');
-  const nestedElem3 = new CreateElement('.car_3', 'div', 'goofy');
-
-  const arrElem = [elem1, elem2, elem3, elem4, nestedElem1, nestedElem2, nestedElem3];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_1');
+  createElement('.current-task', 'div', 'car_2');
+  createElement('.current-task', 'div', 'car_3');
+  createElement('.current-task', 'div', 'train');
+  createElement('.car_1', 'div', 'mas', '', 'strobe');
+  createElement('.car_2', 'div', 'mas');
+  createElement('.car_3', 'div', 'goofy');
 }
 
 function createLevel06(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_horse');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_3');
-  const elem4 = new CreateElement('.current-task', 'div', 'train');
-  const nestedElem1 = new CreateElement('.car_2', 'div', 'small-horse', 'strobe');
-  const nestedElem2 = new CreateElement('.car_3', 'div', 'small-horse', 'strobe');
-
-  const arrElem = [elem1, elem2, elem3, elem4, nestedElem1, nestedElem2];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_horse');
+  createElement('.current-task', 'div', 'car_2');
+  createElement('.current-task', 'div', 'car_3');
+  createElement('.current-task', 'div', 'train');
+  createElement('.car_2', 'div', 'small-horse', '', 'strobe');
+  createElement('.car_3', 'div', 'small-horse', '', 'strobe');
 }
 
 function createLevel07(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'null');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_3');
-  const elem4 = new CreateElement('.current-task', 'div', 'train');
-  const nestedElem1 = new CreateElement('.null', 'div', 'small-mas');
-  const nestedElem2 = new CreateElement('.car_2', 'div', 'mice');
-  const nestedElem3 = new CreateElement('.car_3', 'div', 'small-mice', 'strobe');
-
-  const arrElem = [elem1, elem2, elem3, elem4, nestedElem1, nestedElem2, nestedElem3];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'null');
+  createElement('.current-task', 'div', 'car_2');
+  createElement('.current-task', 'div', 'car_3');
+  createElement('.current-task', 'div', 'train');
+  createElement('.null', 'div', 'small-mas');
+  createElement('.car_2', 'div', 'mice');
+  createElement('.car_3', 'div', 'small-mice', '', 'strobe');
 }
 
 function createLevel08(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_1');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_21');
-  const elem4 = new CreateElement('.current-task', 'div', 'car_22');
+  createElement('.current-task', 'div', 'car_1');
+  createElement('.current-task', 'div', 'car_2');
+  createElement('.current-task', 'div', 'car_21');
+  createElement('.current-task', 'div', 'car_22');
 
-  const nestedElem1 = new CreateElement('.car_1', 'div', 'small-mas');
-  const nestedElem2 = new CreateElement('.car_2', 'div', 'small-mice');
-  const nestedElem3 = new CreateElement('.car_21', 'div', 'small-mas', 'strobe');
-  const nestedElem4 = new CreateElement('.car_22', 'div', 'mice');
-
-  const arrElem = [elem1, elem2, elem3, elem4, nestedElem1, nestedElem2, nestedElem3, nestedElem4];
-  arrElem.map((val) => val.create());
+  createElement('.car_1', 'div', 'small-mas');
+  createElement('.car_2', 'div', 'small-mice');
+  createElement('.car_21', 'div', 'small-mas', '', 'strobe');
+  createElement('.car_22', 'div', 'mice');
 }
 
 function createLevel09(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_horse');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2', 'strobe');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_3', 'strobe');
-  const elem4 = new CreateElement('.current-task', 'div', 'car_21', 'strobe');
-  const nestedElem1 = new CreateElement('.car_2', 'div', 'small-horse', 'strobe');
-  const nestedElem2 = new CreateElement('.car_3', 'div', 'small-horse', 'strobe');
-  const nestedElem3 = new CreateElement('.car_21', 'div', 'horse', 'strobe');
-
-  const arrElem = [elem1, elem2, elem3, elem4, nestedElem1, nestedElem2, nestedElem3];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_horse');
+  createElement('.current-task', 'div', 'car_2', '', 'strobe');
+  createElement('.current-task', 'div', 'car_3', '', 'strobe');
+  createElement('.current-task', 'div', 'car_21', '', 'strobe');
+  createElement('.car_2', 'div', 'small-horse', '', 'strobe');
+  createElement('.car_3', 'div', 'small-horse', '', 'strobe');
+  createElement('.car_21', 'div', 'horse', '', 'strobe');
 }
 
 function createLevel10(): void {
-  const elem1 = new CreateElement('.current-task', 'div', 'car_3', 'strobe');
-  const elem2 = new CreateElement('.current-task', 'div', 'car_2', 'strobe');
-  const elem3 = new CreateElement('.current-task', 'div', 'car_1', 'strobe');
-  const elem4 = new CreateElement('.current-task', 'div', 'train');
-  const nestedElem1 = new CreateElement('.car_1', 'div', 'mice', 'strobe');
-  const nestedElem2 = new CreateElement('.car_2', 'div', 'goofy', 'strobe');
-  const nestedElem3 = new CreateElement('.car_3', 'div', 'mas', 'strobe');
-
-  const arrElem = [elem1, elem2, elem3, elem4, nestedElem1, nestedElem2, nestedElem3];
-  arrElem.map((val) => val.create());
+  createElement('.current-task', 'div', 'car_3', '', 'strobe');
+  createElement('.current-task', 'div', 'car_2', '', 'strobe');
+  createElement('.current-task', 'div', 'car_1', '', 'strobe');
+  createElement('.current-task', 'div', 'train');
+  createElement('.car_1', 'div', 'mice', '', 'strobe');
+  createElement('.car_2', 'div', 'goofy', '', 'strobe');
+  createElement('.car_3', 'div', 'mas', '', 'strobe');
 }
 
 export function createLevel(levelNum: string | null): void {

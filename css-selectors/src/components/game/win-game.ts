@@ -1,4 +1,4 @@
-import { CreateElement } from '../classes/Create-element';
+import { createElement } from '../utils/create-element';
 
 export function winGame(): void {
   let levelComplete = 0;
@@ -9,7 +9,6 @@ export function winGame(): void {
   });
 
   if (levelComplete === 9) {
-    const win = new CreateElement('main', 'div', 'modal');
-    win.create('You WIN!!!');
+    createElement('main', 'div', 'modal', 'You WIN!!!');
   }
 }
