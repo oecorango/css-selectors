@@ -2,7 +2,7 @@ export function createElement(
   parentElement: string,
   tag: string,
   className: string,
-  code?: string,
+  innerHTML?: string,
   secondClassName?: string,
 ): void {
   const parent = document.querySelector(parentElement);
@@ -11,8 +11,8 @@ export function createElement(
   if (secondClassName) {
     createElem.classList.add(secondClassName);
   }
-  if (code) {
-    createElem.innerHTML = code;
+  if (innerHTML) {
+    createElem.innerHTML = innerHTML;
   }
   parent?.append(createElem);
 }
