@@ -9,7 +9,7 @@ export function startGame(): void {
   loadProgress();
   const game = document.querySelector('.current-task');
 
-  const currentLevel = EventEmitter.getLocalStorage('level');
+  const currentLevel = DataStorage.getLocalStorage('level');
   DataStorage.setValue('level', currentLevel);
 
   const buttons: NodeListOf<HTMLElement> = document.querySelectorAll('button');

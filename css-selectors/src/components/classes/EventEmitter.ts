@@ -42,8 +42,8 @@ export class EventEmitter {
         }
         if (elem.classList.contains('reset-game')) {
           resetGame();
-          this.setLocalStorage('level', '01');
-          this.setLocalStorage('current-level', '01');
+          DataStorage.setLocalStorage('level', '01');
+          DataStorage.setLocalStorage('current-level', '01');
           createHtmlEditor('01');
           highlightCode();
           changeClass('task', 'add', 'task_current', '01');
@@ -53,47 +53,37 @@ export class EventEmitter {
           removeElementPrevLevel();
           createHtmlEditor(elem.innerText);
           highlightCode();
-          this.setLocalStorage('level', elem.innerText);
+          DataStorage.setLocalStorage('level', elem.innerText);
           createLevel(elem.innerText);
           DataStorage.setValue('level', elem.innerText);
           changeClass('task', 'remove', 'task_current');
           setFocus();
           elem.classList.add('task_current');
-          this.setLocalStorage('current-level', elem.innerText);
+          DataStorage.setLocalStorage('current-level', elem.innerText);
         }
       });
     }
-  }
-
-  public static setLocalStorage(name: string, value: string): void {
-    window.addEventListener('beforeunload', () => localStorage.setItem(name, value));
-  }
-
-  public static getLocalStorage(name: string): string {
-    const levels: string | null = localStorage.getItem(name);
-    if (levels === null) return '01';
-    return levels;
   }
 
   public static getInputValue(input: HTMLInputElement | null, button: HTMLElement | null): void {
     if (input) {
       input.addEventListener('keydown', (event) => {
         if (event.code === 'Enter' || event.code === 'NumpadEnter') {
-          this.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
+          DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
           const nextLevel = nextLevelNum();
 
-          this.setLocalStorage('level', nextLevel);
+          DataStorage.setLocalStorage('level', nextLevel);
           correctAnswer(input.value);
         }
       });
 
       if (button) {
         button.addEventListener('click', () => {
-          this.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
+          DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complite');
           const nextLevel = nextLevelNum();
           setFocus();
 
-          this.setLocalStorage('level', nextLevel);
+          DataStorage.setLocalStorage('level', nextLevel);
           correctAnswer(input.value);
         });
       }

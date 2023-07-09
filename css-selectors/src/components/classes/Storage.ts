@@ -11,4 +11,14 @@ export class DataStorage {
     }
     return null;
   }
+
+  public static setLocalStorage(name: string, value: string): void {
+    window.addEventListener('beforeunload', () => localStorage.setItem(name, value));
+  }
+
+  public static getLocalStorage(name: string): string {
+    const levels: string | null = localStorage.getItem(name);
+    if (levels === null) return '01';
+    return levels;
+  }
 }
