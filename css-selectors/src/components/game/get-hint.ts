@@ -8,10 +8,10 @@ export function getHint(): void {
   const currentLevel = DataStorage.getValue('level');
   const numLevel = Number(currentLevel) - 1;
   const correctAnswer = storageAnswers[numLevel];
-  const input = document.getElementsByTagName('input')[0];
+  const input: HTMLInputElement | null = document.querySelector('.input-css__code');
 
   function printTimeOut(str: string, num: number): void {
-    if (num < str.length) {
+    if (num < str.length && input) {
       input.value = str.substring(0, num + 1);
       // eslint-disable-next-line no-param-reassign
       num += 1;

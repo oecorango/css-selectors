@@ -1,4 +1,4 @@
 export function clearInputValue(): void {
-  const input = document.getElementsByTagName('input')[0];
-  input.value = '';
+  const input: HTMLInputElement | null = document.querySelector('.input-css__code');
+  if (input) input.value = '';
 }
