@@ -7,7 +7,7 @@ export function getHint(): void {
 
   const currentLevel = DataStorage.getValue('level');
   const numLevel = Number(currentLevel) - 1;
-  const corretcAnswer = storageAnswers[numLevel];
+  const correctAnswer = storageAnswers[numLevel];
   const input = document.getElementsByTagName('input')[0];
 
   function printTimeOut(str: string, num: number): void {
@@ -20,5 +20,5 @@ export function getHint(): void {
       }, 100);
     }
   }
-  printTimeOut(corretcAnswer, 0);
+  printTimeOut(correctAnswer, 0);
 }

@@ -1,4 +1,4 @@
-import { EventEmitter } from './classes/EventEmeitter';
+import { EventEmitter } from './classes/EventEmitter';
 import { DataStorage } from './classes/Storage';
 import { loadProgress } from './game/load-game-progress';
 import { createLevel } from './game/level-for-game';

@@ -1,10 +1,10 @@
-import { EventEmitter } from '../classes/EventEmeitter';
+import { EventEmitter } from '../classes/EventEmitter';
 
 export function highlightElement(): void {
   const elem: HTMLElement | null = document.querySelector('.current-task');
   if (elem) {
-    const chidren = Array.from(elem.getElementsByTagName('*'));
-    const event = new EventEmitter(chidren);
+    const children = Array.from(elem.getElementsByTagName('*'));
+    const event = new EventEmitter(children);
     event.mouseover();
   }
 }

@@ -1,4 +1,4 @@
-export class CreateEltment {
+export class CreateElement {
   private parent: string;
 
   private tag: string;

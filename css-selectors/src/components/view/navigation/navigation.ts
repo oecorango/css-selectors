@@ -1,13 +1,13 @@
 import './navigation.scss';
-import { CreateEltment } from '../../classes/Create-element';
+import { CreateElement } from '../../classes/Create-element';
 import levelsTask from '../levels.json';
 
 export function createNavigation(): void {
-  const header = new CreateEltment('body', 'aside', 'aside');
-  const headerName = new CreateEltment('.aside', 'h2', 'aside__head');
-  const navigation = new CreateEltment('.aside', 'div', 'navigation');
-  const resetBtn = new CreateEltment('.aside', 'button', 'reset-game');
-  const helpBtn = new CreateEltment('.aside', 'button', 'help-game');
+  const header = new CreateElement('body', 'aside', 'aside');
+  const headerName = new CreateElement('.aside', 'h2', 'aside__head');
+  const navigation = new CreateElement('.aside', 'div', 'navigation');
+  const resetBtn = new CreateElement('.aside', 'button', 'reset-game');
+  const helpBtn = new CreateElement('.aside', 'button', 'help-game');
 
   header.create();
   headerName.create('Levels');
@@ -16,7 +16,7 @@ export function createNavigation(): void {
   helpBtn.create('Help me!');
 
   levelsTask.forEach((value) => {
-    const levels = new CreateEltment('.navigation', 'button', 'task');
+    const levels = new CreateElement('.navigation', 'button', 'task');
     levels.create(value.level);
   });
 }

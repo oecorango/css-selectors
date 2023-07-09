@@ -1,5 +1,5 @@
 import { createLevel } from '../game/level-for-game';
-import { corretAnswer } from '../game/task-complite';
+import { correctAnswer } from '../game/task-complete';
 import { DataStorage } from './Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { createHtmlEditor } from '../view/create-next_page';
@@ -87,7 +87,7 @@ export class EventEmitter {
           const nextLevel = nextLevelNum();
 
           this.setLocalStorage('level', nextLevel);
-          corretAnswer(input.value);
+          correctAnswer(input.value);
         }
       });
 
@@ -98,7 +98,7 @@ export class EventEmitter {
           setFocus();
 
           this.setLocalStorage('level', nextLevel);
-          corretAnswer(input.value);
+          correctAnswer(input.value);
         });
       }
     }

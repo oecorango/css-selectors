@@ -8,7 +8,7 @@ import { clearInputValue } from './clear-input';
 import { createLevel } from './level-for-game';
 import { winGame } from './win-game';
 
-export function corretAnswer(inputValue: string): void {
+export function correctAnswer(inputValue: string): void {
   const currentLevel = DataStorage.getValue('level');
 
   const nextLevel = (): string => (Number(currentLevel) < 9 ? `0${Number(currentLevel) + 1}` : '10');
