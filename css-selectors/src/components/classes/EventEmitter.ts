@@ -2,7 +2,7 @@ import { createLevel } from '../game/create-level';
 import { correctAnswer } from '../game/task-complete';
 import { DataStorage } from './Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
-import { createHtmlEditor } from '../view/create-next_page';
+import { createHtmlEditor } from '../view/create-next-html-editor';
 import { highlightCode } from '../view/highlight-code';
 import { changeClass } from '../game/change-class-for-elem';
 import { setFocus } from '../view/set-focus';
@@ -57,7 +57,7 @@ export class EventEmitter {
           DataStorage.setLocalStorage('level', elem.innerText);
 
           const indexOfLevel = LOCAL_STORAGE_ITEM.indexOf(<Level>elem.innerText);
-          if (indexOfLevel) {
+          if (indexOfLevel >= 0) {
             createLevel(LOCAL_STORAGE_ITEM[indexOfLevel]);
             DataStorage.setValue('level', LOCAL_STORAGE_ITEM[indexOfLevel]);
           }

@@ -1,5 +1,5 @@
 import levelsTask from './levels.json';
 
-export function getHtmlCode(levelNum: number): string {
-  return levelsTask[levelNum].html;
+export function getHtmlCode(levelNum: string): string {
+  return levelsTask[Number(levelNum) - 1].html;
 }

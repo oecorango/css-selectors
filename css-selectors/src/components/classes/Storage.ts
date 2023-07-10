@@ -1,5 +1,5 @@
 import { Level } from '../types/types';
-import { LOCAL_STORAGE_ITEM, NEW_GAME_LEVEL } from '../utils/constants';
+import { NEW_GAME_LEVEL } from '../utils/constants';
 
 export class DataStorage {
   private static items = new Map<string, Level>();

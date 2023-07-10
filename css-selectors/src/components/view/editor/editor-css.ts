@@ -1,6 +1,6 @@
 import './editor-css.scss';
 import { createElement } from '../../utils/create-element';
-import { CODE_EDITOR_COLUMN } from '../../utils/constants';
+import { CODE_EDITOR_COLUMN, TEXT_CSS_EDITOR } from '../../utils/constants';
 
 export function createCssEditor(): void {
   createElement('.editor', 'div', 'editor__css');
@@ -14,10 +14,5 @@ export function createCssEditor(): void {
   createElement('.editor-css__content', 'div', 'editor-css__code');
   createElement('.editor-css__code', 'input', 'input-css__code');
   createElement('.editor-css__code', 'button', 'button-css__code', 'Enter');
-  createElement(
-    '.editor-css__code',
-    'p',
-    'css__text',
-    '{<br>&nbsp/* Styles would go here. */<br>}<br><br>/*<br>&nbspType a number to skip to a level.<br>&nbspEx → "5" for level 5<br>*/',
-  );
+  createElement('.editor-css__code', 'p', 'css__text', TEXT_CSS_EDITOR);
 }

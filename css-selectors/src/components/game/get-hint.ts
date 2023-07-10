@@ -1,5 +1,5 @@
 import { DataStorage } from '../classes/Storage';
-import { storageAnswers } from './answers';
+import { ANSWER_MAP, NEW_GAME_LEVEL } from '../utils/constants';
 import { clearInputValue } from './clear-input';
 import { printTimeOut } from './print-correct-answer';
 
@@ -7,9 +7,12 @@ const startCharNumber = 0;
 
 export function getHint(): void {
   const currentLevel = DataStorage.getValue('level');
-  const numLevel = Number(currentLevel) - 1;
-  const correctAnswer = storageAnswers[numLevel];
-
+  let correctAnswer = '';
+  if (!currentLevel) {
+    correctAnswer = ANSWER_MAP[NEW_GAME_LEVEL];
+  } else {
+    correctAnswer = ANSWER_MAP[currentLevel];
+  }
   clearInputValue();
   printTimeOut(correctAnswer, startCharNumber);
 }

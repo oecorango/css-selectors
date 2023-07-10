@@ -1,3 +1,4 @@
+import { ALL_LEVELS } from '../utils/constants';
 import { createElement } from '../utils/create-element';
 
 export function winGame(): void {
@@ -5,10 +6,10 @@ export function winGame(): void {
 
   const buttons: NodeListOf<HTMLElement> = document.querySelectorAll('button');
   buttons.forEach((btn) => {
-    if (btn.classList.contains('task_complete') || btn.classList.contains('task_help')) levelComplete += 1;
+    if (btn.classList.contains('task_complete')) levelComplete += 1;
   });
 
-  if (levelComplete === 9) {
+  if (levelComplete === ALL_LEVELS) {
     createElement('main', 'div', 'modal', 'You WIN!!!');
   }
 }

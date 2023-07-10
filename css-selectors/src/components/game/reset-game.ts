@@ -15,5 +15,5 @@ export function resetGame(): void {
 
   changeClass('task', 'remove', 'task_current');
   changeClass('task', 'remove', 'task_complete');
-  createLevel('01');
+  createLevel(NEW_GAME_LEVEL);
 }

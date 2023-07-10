@@ -15,7 +15,7 @@ export function createHtmlEditor(): void {
   createElement('.editor__content', 'div', 'editor__str', CODE_EDITOR_COLUMN);
 
   const saveLevel = DataStorage.getLocalStorage('level');
-  createElement('.editor__content', 'div', 'editor__code', getHtmlCode(Number(saveLevel) - 1));
+  if (saveLevel) createElement('.editor__content', 'div', 'editor__code', getHtmlCode(saveLevel));
 
   highlightCode();
 }
