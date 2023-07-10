@@ -5,13 +5,12 @@ import { removeElementPrevLevel } from '../view/remove-element';
 import { storageAnswers } from './answers';
 import { changeClass } from './change-class-for-elem';
 import { clearInputValue } from './clear-input';
+import { nextLevel } from './create-new-level';
 import { createLevel } from './level-for-game';
 import { winGame } from './win-game';
 
 export function correctAnswer(inputValue: string): void {
   const currentLevel = DataStorage.getValue('level');
-
-  const nextLevel = (): string => (Number(currentLevel) < 9 ? `0${Number(currentLevel) + 1}` : '10');
 
   if (currentLevel) {
     const num = Number(currentLevel);

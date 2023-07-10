@@ -1,6 +1,6 @@
 import './level-for-game.scss';
 import { createElement } from '../utils/create-element';
-import { NEW_GAME_LEVEL } from '../utils/constants';
+import { Level } from '../types/types';
 
 function createLevel01(): void {
   createElement('.current-task', 'div', 'car_3', '', 'strobe');
@@ -91,15 +91,23 @@ function createLevel10(): void {
   createElement('.car_3', 'div', 'mas', '', 'strobe');
 }
 
-export function createLevel(levelNum: string | null): void {
-  if (levelNum === null || levelNum === NEW_GAME_LEVEL) createLevel01();
-  if (levelNum === '02') createLevel02();
-  if (levelNum === '03') createLevel03();
-  if (levelNum === '04') createLevel04();
-  if (levelNum === '05') createLevel05();
-  if (levelNum === '06') createLevel06();
-  if (levelNum === '07') createLevel07();
-  if (levelNum === '08') createLevel08();
-  if (levelNum === '09') createLevel09();
-  if (levelNum === '10') createLevel10();
+const LEVEL_MAP: Record<Level, () => void> = {
+  '01': createLevel01,
+  '02': createLevel02,
+  '03': createLevel03,
+  '04': createLevel04,
+  '05': createLevel05,
+  '06': createLevel06,
+  '07': createLevel07,
+  '08': createLevel08,
+  '09': createLevel09,
+  '10': createLevel10,
+};
+
+export function createLevel(level: Level | null): void {
+  if (level) {
+    LEVEL_MAP[level]();
+  } else {
+    createLevel01();
+  }
 }

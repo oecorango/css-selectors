@@ -6,11 +6,12 @@ import { createHtmlEditor } from '../view/create-next_page';
 import { highlightCode } from '../view/highlight-code';
 import { changeClass } from '../game/change-class-for-elem';
 import { setFocus } from '../view/set-focus';
-import { nextLevelNum } from '../game/next-level';
+import { nextLevelNum } from '../game/next-level-number';
 import { getHint } from '../game/get-hint';
 import { clearInputValue } from '../game/clear-input';
 import { resetGame } from '../game/reset-game';
-import { NEW_GAME_LEVEL } from '../utils/constants';
+import { LOCAL_STORAGE_ITEM, NEW_GAME_LEVEL } from '../utils/constants';
+import { Level } from '../types/types';
 
 export class EventEmitter {
   private elems: Element[] | null;
@@ -44,7 +45,6 @@ export class EventEmitter {
         if (elem.classList.contains('reset-game')) {
           resetGame();
           DataStorage.setLocalStorage('level', NEW_GAME_LEVEL);
-          DataStorage.setLocalStorage('current-level', NEW_GAME_LEVEL);
           createHtmlEditor(NEW_GAME_LEVEL);
           highlightCode();
           changeClass('task', 'add', 'task_current', NEW_GAME_LEVEL);
@@ -55,12 +55,16 @@ export class EventEmitter {
           createHtmlEditor(elem.innerText);
           highlightCode();
           DataStorage.setLocalStorage('level', elem.innerText);
-          createLevel(elem.innerText);
-          DataStorage.setValue('level', elem.innerText);
+
+          const indexOfLevel = LOCAL_STORAGE_ITEM.indexOf(<Level>elem.innerText);
+          if (indexOfLevel) {
+            createLevel(LOCAL_STORAGE_ITEM[indexOfLevel]);
+            DataStorage.setValue('level', LOCAL_STORAGE_ITEM[indexOfLevel]);
+          }
+
           changeClass('task', 'remove', 'task_current');
           setFocus();
           elem.classList.add('task_current');
-          DataStorage.setLocalStorage('current-level', elem.innerText);
         }
       });
     }
@@ -68,12 +72,12 @@ export class EventEmitter {
 
   public static getInputValue(input: HTMLInputElement | null, button: HTMLElement | null): void {
     if (input) {
+      const nextLevelNumber = nextLevelNum();
       input.addEventListener('keydown', (event) => {
         if (event.code === 'Enter' || event.code === 'NumpadEnter') {
           DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complete');
-          const nextLevel = nextLevelNum();
 
-          DataStorage.setLocalStorage('level', nextLevel);
+          DataStorage.setLocalStorage('level', nextLevelNumber);
           correctAnswer(input.value);
         }
       });
@@ -81,10 +85,9 @@ export class EventEmitter {
       if (button) {
         button.addEventListener('click', () => {
           DataStorage.setLocalStorage(`level-${DataStorage.getValue('level')}`, 'complete');
-          const nextLevel = nextLevelNum();
           setFocus();
 
-          DataStorage.setLocalStorage('level', nextLevel);
+          DataStorage.setLocalStorage('level', nextLevelNumber);
           correctAnswer(input.value);
         });
       }

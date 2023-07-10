@@ -1,25 +1,26 @@
-import { NEW_GAME_LEVEL } from '../utils/constants';
+import { Level } from '../types/types';
+import { LOCAL_STORAGE_ITEM, NEW_GAME_LEVEL } from '../utils/constants';
 
 export class DataStorage {
-  private static items = new Map<string, string>();
+  private static items = new Map<string, Level>();
 
-  public static setValue(name: string, value: string): void {
+  public static setValue(name: string, value: Level): void {
     this.items.set(name, value);
   }
 
-  public static getValue(name: string): string | undefined | null {
+  public static getValue(name: Level | string): Level | undefined | null {
     if (this.items.has(name)) {
       return this.items.get(name);
     }
     return null;
   }
 
-  public static setLocalStorage(name: string, value: string): void {
+  public static setLocalStorage(name: string, value: Level | string): void {
     window.addEventListener('beforeunload', () => localStorage.setItem(name, value));
   }
 
-  public static getLocalStorage(name: string): string {
-    const levels: string | null = localStorage.getItem(name);
+  public static getLocalStorage(name: string): string | null {
+    const levels = localStorage.getItem(name);
     if (levels === null) return NEW_GAME_LEVEL;
     return levels;
   }
