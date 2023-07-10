@@ -1,7 +1,7 @@
 import { DataStorage } from '../classes/Storage';
 import { removeElementPrevLevel } from '../view/remove-element';
 import { changeClass } from './change-class-for-elem';
-import { createLevel } from './level-for-game';
+import { createLevel } from './create-level';
 import { NEW_GAME_LEVEL, LOCAL_STORAGE_ITEM } from '../utils/constants';
 
 export function resetGame(): void {

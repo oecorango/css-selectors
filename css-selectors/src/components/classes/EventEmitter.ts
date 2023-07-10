@@ -1,4 +1,4 @@
-import { createLevel } from '../game/level-for-game';
+import { createLevel } from '../game/create-level';
 import { correctAnswer } from '../game/task-complete';
 import { DataStorage } from './Storage';
 import { removeElementPrevLevel } from '../view/remove-element';

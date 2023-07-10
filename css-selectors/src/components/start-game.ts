@@ -1,7 +1,7 @@
 import { EventEmitter } from './classes/EventEmitter';
 import { DataStorage } from './classes/Storage';
 import { loadProgress } from './game/load-game-progress';
-import { createLevel } from './game/level-for-game';
+import { createLevel } from './game/create-level';
 import { setFocus } from './view/set-focus';
 import { highlightElement } from './game/highlight-hovered';
 import { Level } from './types/types';

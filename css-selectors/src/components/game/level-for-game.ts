@@ -1,6 +1,5 @@
 import './level-for-game.scss';
 import { createElement } from '../utils/create-element';
-import { Level } from '../types/types';
 
 function createLevel01(): void {
   createElement('.current-task', 'div', 'car_3', '', 'strobe');
@@ -91,23 +90,15 @@ function createLevel10(): void {
   createElement('.car_3', 'div', 'mas', '', 'strobe');
 }
 
-const LEVEL_MAP: Record<Level, () => void> = {
-  '01': createLevel01,
-  '02': createLevel02,
-  '03': createLevel03,
-  '04': createLevel04,
-  '05': createLevel05,
-  '06': createLevel06,
-  '07': createLevel07,
-  '08': createLevel08,
-  '09': createLevel09,
-  '10': createLevel10,
+export {
+  createLevel01,
+  createLevel02,
+  createLevel03,
+  createLevel04,
+  createLevel05,
+  createLevel06,
+  createLevel07,
+  createLevel08,
+  createLevel09,
+  createLevel10,
 };
-
-export function createLevel(level: Level | null): void {
-  if (level) {
-    LEVEL_MAP[level]();
-  } else {
-    createLevel01();
-  }
-}
