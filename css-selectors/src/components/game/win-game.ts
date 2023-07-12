@@ -10,6 +10,6 @@ export function winGame(): void {
   });
 
   if (levelComplete === ALL_LEVELS_COUNT) {
-    createElement('main', 'div', 'modal', 'You WIN!!!');
+    createElement('main', 'div', ['modal'], 'You WIN!!!');
   }
 }
