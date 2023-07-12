@@ -10,7 +10,7 @@ import { nextLevelNum } from '../game/next-level-number';
 import { getHint } from '../game/get-hint';
 import { clearInputValue } from '../game/clear-input';
 import { resetGame } from '../game/reset-game';
-import { LOCAL_STORAGE_ITEM, NEW_GAME_LEVEL } from '../utils/constants';
+import { ALL_LEVELS, NEW_GAME_LEVEL } from '../utils/constants';
 import { Level } from '../types/types';
 
 export class EventEmitter {
@@ -56,10 +56,10 @@ export class EventEmitter {
           highlightCode();
           DataStorage.setLocalStorage('level', elem.innerText);
 
-          const indexOfLevel = LOCAL_STORAGE_ITEM.indexOf(<Level>elem.innerText);
+          const indexOfLevel = ALL_LEVELS.indexOf(<Level>elem.innerText);
           if (indexOfLevel >= 0) {
-            createLevel(LOCAL_STORAGE_ITEM[indexOfLevel]);
-            DataStorage.setValue('level', LOCAL_STORAGE_ITEM[indexOfLevel]);
+            createLevel(ALL_LEVELS[indexOfLevel]);
+            DataStorage.setValue('level', ALL_LEVELS[indexOfLevel]);
           }
 
           changeClass('task', 'remove', 'task_current');

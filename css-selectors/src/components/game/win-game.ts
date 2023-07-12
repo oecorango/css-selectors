@@ -1,4 +1,4 @@
-import { ALL_LEVELS } from '../utils/constants';
+import { ALL_LEVELS_COUNT } from '../utils/constants';
 import { createElement } from '../utils/create-element';
 
 export function winGame(): void {
@@ -9,7 +9,7 @@ export function winGame(): void {
     if (btn.classList.contains('task_complete')) levelComplete += 1;
   });
 
-  if (levelComplete === ALL_LEVELS) {
+  if (levelComplete === ALL_LEVELS_COUNT) {
     createElement('main', 'div', 'modal', 'You WIN!!!');
   }
 }

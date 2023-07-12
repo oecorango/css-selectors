@@ -1,6 +1,7 @@
 import './game.scss';
 import { createElement } from '../../utils/create-element';
 import { createLinks } from '../create-links';
+import { LINK_TO_GITHUB, LINK_TO_SCHOOL } from '../../utils/constants';
 
 export function createGame(): void {
   createElement('body', 'main', 'main');
@@ -14,6 +15,6 @@ export function createGame(): void {
   createElement('.header__content', 'div', 'rs-school');
   createElement('.header__content', 'div', 'github');
 
-  createLinks('.rs-school', 'https://rs.school/js/');
-  createLinks('.github', 'https://github.com/oecorango/');
+  createLinks('.rs-school', LINK_TO_SCHOOL);
+  createLinks('.github', LINK_TO_GITHUB);
 }

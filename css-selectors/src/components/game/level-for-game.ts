@@ -1,27 +1,27 @@
 import './level-for-game.scss';
 import { createElement } from '../utils/create-element';
 
-function createLevel01(): void {
+export function createLevel01(): void {
   createElement('.current-task', 'div', 'car_3', '', 'strobe');
   createElement('.current-task', 'div', 'car_3', '', 'strobe');
   createElement('.current-task', 'div', 'train');
 }
 
-function createLevel02(): void {
+export function createLevel02(): void {
   createElement('.current-task', 'div', 'car_2', '', 'strobe');
   createElement('.current-task', 'div', 'car_3');
   createElement('.current-task', 'div', 'car_2', '', 'strobe');
   createElement('.current-task', 'div', 'train');
 }
 
-function createLevel03(): void {
+export function createLevel03(): void {
   createElement('.current-task', 'div', 'car_3');
   createElement('.current-task', 'div', 'car_2');
   createElement('.current-task', 'div', 'car_1', '', 'strobe');
   createElement('.current-task', 'div', 'train');
 }
 
-function createLevel04(): void {
+export function createLevel04(): void {
   createElement('.current-task', 'div', 'car_horse');
   createElement('.current-task', 'div', 'car_2');
   createElement('.current-task', 'div', 'car_3');
@@ -29,7 +29,7 @@ function createLevel04(): void {
   createElement('.car_2', 'div', 'horse', '', 'strobe');
 }
 
-function createLevel05(): void {
+export function createLevel05(): void {
   createElement('.current-task', 'div', 'car_1');
   createElement('.current-task', 'div', 'car_2');
   createElement('.current-task', 'div', 'car_3');
@@ -39,7 +39,7 @@ function createLevel05(): void {
   createElement('.car_3', 'div', 'goofy');
 }
 
-function createLevel06(): void {
+export function createLevel06(): void {
   createElement('.current-task', 'div', 'car_horse');
   createElement('.current-task', 'div', 'car_2');
   createElement('.current-task', 'div', 'car_3');
@@ -48,7 +48,7 @@ function createLevel06(): void {
   createElement('.car_3', 'div', 'small-horse', '', 'strobe');
 }
 
-function createLevel07(): void {
+export function createLevel07(): void {
   createElement('.current-task', 'div', 'null');
   createElement('.current-task', 'div', 'car_2');
   createElement('.current-task', 'div', 'car_3');
@@ -58,7 +58,7 @@ function createLevel07(): void {
   createElement('.car_3', 'div', 'small-mice', '', 'strobe');
 }
 
-function createLevel08(): void {
+export function createLevel08(): void {
   createElement('.current-task', 'div', 'car_1');
   createElement('.current-task', 'div', 'car_2');
   createElement('.current-task', 'div', 'car_21');
@@ -70,7 +70,7 @@ function createLevel08(): void {
   createElement('.car_22', 'div', 'mice');
 }
 
-function createLevel09(): void {
+export function createLevel09(): void {
   createElement('.current-task', 'div', 'car_horse');
   createElement('.current-task', 'div', 'car_2', '', 'strobe');
   createElement('.current-task', 'div', 'car_3', '', 'strobe');
@@ -80,7 +80,7 @@ function createLevel09(): void {
   createElement('.car_21', 'div', 'horse', '', 'strobe');
 }
 
-function createLevel10(): void {
+export function createLevel10(): void {
   createElement('.current-task', 'div', 'car_3', '', 'strobe');
   createElement('.current-task', 'div', 'car_2', '', 'strobe');
   createElement('.current-task', 'div', 'car_1', '', 'strobe');
@@ -89,16 +89,3 @@ function createLevel10(): void {
   createElement('.car_2', 'div', 'goofy', '', 'strobe');
   createElement('.car_3', 'div', 'mas', '', 'strobe');
 }
-
-export {
-  createLevel01,
-  createLevel02,
-  createLevel03,
-  createLevel04,
-  createLevel05,
-  createLevel06,
-  createLevel07,
-  createLevel08,
-  createLevel09,
-  createLevel10,
-};

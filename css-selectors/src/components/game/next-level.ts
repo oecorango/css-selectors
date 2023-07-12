@@ -1,15 +1,15 @@
 import { DataStorage } from '../classes/Storage';
 import { Level } from '../types/types';
-import { LOCAL_STORAGE_ITEM } from '../utils/constants';
+import { ALL_LEVELS } from '../utils/constants';
 
 export function nextLevel(): Level {
   const currentLevel = DataStorage.getValue('level');
 
   if (currentLevel) {
-    const index = LOCAL_STORAGE_ITEM.indexOf(currentLevel);
-    if (index < LOCAL_STORAGE_ITEM.length - 1) {
-      return LOCAL_STORAGE_ITEM[index + 1];
+    const index = ALL_LEVELS.indexOf(currentLevel);
+    if (index < ALL_LEVELS.length - 1) {
+      return ALL_LEVELS[index + 1];
     }
   }
-  return LOCAL_STORAGE_ITEM[0];
+  return ALL_LEVELS[0];
 }

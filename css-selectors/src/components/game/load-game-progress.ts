@@ -1,7 +1,7 @@
-import { LOCAL_STORAGE_ITEM } from '../utils/constants';
+import { ALL_LEVELS } from '../utils/constants';
 
 export function loadProgress(): void {
-  LOCAL_STORAGE_ITEM.forEach((el) => {
+  ALL_LEVELS.forEach((el) => {
     const levelComplete = localStorage.getItem(`level-${el}`);
     if (levelComplete === 'complete') {
       const buttons: NodeListOf<HTMLElement> = document.querySelectorAll('button');
