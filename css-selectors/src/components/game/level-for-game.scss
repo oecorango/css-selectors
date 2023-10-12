@@ -1,0 +1,181 @@
+.current-task {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  & > * {
+    width: 192px;
+    height: 270px;
+    margin-bottom: 120px;
+    background-size: contain;
+    @media (max-width: 900px) {
+      width: 130px;
+      height: 185px;
+      margin-bottom: 120px;
+    }
+    @media (max-width: 620px) {
+      width: 105px;
+      height: 150px;
+      margin-bottom: 120px;
+      background-size: contain;
+    }
+  }
+}
+
+.train,
+.car_1, 
+.car_2,
+.car_21,
+.csr_22,
+.car_3,
+.car_horse,
+.null {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.highlight {
+    filter: drop-shadow(0 0 6px #436cf3);
+  }
+}
+
+.horse,
+.goofy,
+.mas,
+.mice {
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  &.highlight {
+    filter: drop-shadow(0 0 6px #436cf3);
+  }
+}
+
+.small-mice,
+.small-horse {
+  height: 75%;
+  width: 75%;
+  background-size: contain;
+  & .highlight {
+    filter: drop-shadow(0 0 6px #436cf3);
+  }
+}
+
+.small-mas {
+  height: 75%;
+  width: 75%;
+  background-size: contain;
+  @media (max-width: 900px) {
+    width: 105px;
+    height: 110px;
+    margin-bottom: 90px;
+  }
+  @media (max-width: 620px) {
+    width: 50px;
+    height: 70px;
+    margin-bottom: 120px;
+  }
+}
+
+.train {
+  background-image: url(../../assets/train.gif);
+}
+
+.car_1 {
+  background-image: url(../../assets/car1.png);
+  & .small-mas {
+    margin-bottom: 250px;
+    @media (max-width: 620px) {
+      margin-bottom: 275px;
+    }
+  }
+}
+
+.car_2,
+.car_21,
+.car_22 {
+  background-image: url(../../assets/car2.png);
+  & .small-mas {
+    margin-bottom: 250px;
+    @media (max-width: 620px) {
+      margin-bottom: 275px;
+    }
+  }
+}
+
+.car_3 {
+  background-image: url(../../assets/car3.png);
+}
+
+.car_horse {
+  background-image: url(../../assets/car-horse.png);
+}
+
+.horse,
+.small-horse {
+  background-image: url(../../assets/horse.png);
+}
+
+.goofy {
+  background-image: url(../../assets/goofy.png);
+}
+
+.mice,
+.small-mice {
+  background-image: url(../../assets/mice.png);
+}
+
+.mas,
+.small-mas {
+  background-image: url(../../assets/mas.png);
+}
+
+.small-mas {
+  margin-top: 265px;
+  margin-left: 50px;
+}
+
+.strobe {
+  animation: strobe 1s infinite;
+  animation-delay: 0s, .5s;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 4rem;
+  text-align: center;
+  border: solid 3px #fff;;
+  border-radius: 5px;
+  height: 10%;
+  width: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+  }
+}
+
+@keyframes strobe {
+  0% { transform:
+    skew(4deg, 0deg)
+    scaleX(0.95)
+  }
+  10% { transform:
+    skew(1deg, 0deg)
+  }
+  50% { transform:
+    skew(-4deg, 0deg)
+    scaleX(.95)
+
+  }
+  60% { transform:
+    skew(-1deg, 0deg)
+  }
+  100% {transform:
+    skew(4deg, 0deg)
+    scaleX(.95)
+  }
+}

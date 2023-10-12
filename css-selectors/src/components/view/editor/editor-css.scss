@@ -1,0 +1,118 @@
+.editor {
+  display: flex;
+  height: 47%;
+  background-color: #a5a5a5;
+  border: 8px solid #5c5c5c;
+  border-radius: 5px;
+}
+
+.editor__css {
+  display: flex;
+  flex-direction: column;
+  border-right: 4px solid #5c5c5c;
+  padding: 0.5em;
+  width: 50%;
+}
+
+.editor-css__header {
+  display: flex;
+  justify-content: space-between;
+  order: -1;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 0 5px 5px;
+}
+
+.editor-css__content {
+  display: flex;
+}
+
+.editor-css__code {
+  width: 95%;
+  order: 1;
+  background-color: #dfdfdf;
+  padding-top: 2px;
+}
+
+.editor-css__str {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+  padding: 0.5em;
+  width: 5%;
+  order: 0;
+}
+
+.css__text {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+.input-css__code {
+  display: inline-block;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 5%;
+  width: 55%;
+  border-radius: 5px;
+  animation: flicker .6s infinite;
+}
+
+.anim {
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+.button-css__code{
+  display: inline-block;
+  background-color: #747474;
+  color: #fff;
+  width: 30%;
+  border-radius: 5px;
+  transition: all .3s;
+  &:hover {
+    background-color: #23241f;
+  }
+  @media (max-width: 550px) {
+    font-size: 0.9em;
+  }
+}
+
+.shake {
+  animation: shake .1s 4;
+}
+
+@keyframes flicker {
+  0% {
+    background-color: #dfdfdf;
+  }
+
+  50% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: #dfdfdf;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

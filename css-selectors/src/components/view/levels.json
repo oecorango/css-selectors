@@ -1,0 +1,52 @@
+[
+  {
+    "level": "01",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;car /&gt;\n  &lt;car /&gt; \n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "02",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;vagon /&gt;\n  &lt;car /&gt;\n  &lt;vagon /&gt; \n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "03",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;car /&gt;\n  &lt;vagon /&gt;\n  &lt;car id=\"music\" /&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "04",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;horse /&gt;\n  &lt;vagon&gt; \n    &lt;horse /&gt; \n  &lt;/vagon&gt;\n  &lt;car /&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "05",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;car id=\"music\"&gt;\n    &lt;masyanya /&gt;\n  &lt;vagon&gt;\n    &lt;masyanya /&gt; \n  &lt;/vagon&gt;\n  &lt;car&gt;\n    &lt;goofy /&gt;\n  &lt;/car&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "06",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;horse /&gt;\n  &lt;vagon&gt;\n    &lt;horse class=\"small\" /&gt; \n  &lt;/vagon&gt;\n  &lt;car&gt;\n    &lt;horse class=\"small\" /&gt; \n  &lt;/car&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "07",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;masyanya class=\"small\" /&gt; \n  &lt;vagon&gt;\n    &lt;mice /&gt; \n  &lt;/vagon&gt;\n  &lt;car&gt;\n    &lt;mice class=\"small\" /&gt; \n  &lt;/car&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "08",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;car id=\"music\" /&gt;\n    &lt;masyanya class=\"small\" /&gt; \n  &lt;/car&gt;\n  &lt;vagon&gt;\n    &lt;mice class=\"small\" /&gt; \n  &lt;/vagon&gt;\n  &lt;vagon&gt;\n    &lt;masyanya class=\"small\" /&gt; \n  &lt;/vagon&gt;\n  &lt;vagon&gt;\n    &lt;mice class=\"small\" /&gt; \n  &lt;/vagon&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "09",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;horse /&gt;\n  &lt;vagon&gt;\n     &lt;horse class=\"small\" /&gt; \n  &lt;/vagon&gt;\n  &lt;car&gt;\n    &lt;horse class=\"small\" /&gt; \n  &lt;/car&gt;\n  &lt;vagon&gt;\n    &lt;horse /&gt; \n  &lt;/vagon&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  },
+  {
+    "level": "10",
+    "html": "<pre class='code__html'><code class='html'>&lt;div class=\"train\"&gt;\n  &lt;car&gt;\n    &lt;masyanya /&gt;\n  &lt;vagon&gt;\n    &lt;goofy /&gt; \n  &lt;/vagon&gt;\n  &lt;car id=\"music\"&gt;\n    &lt;mice /&gt;\n  &lt;/car&gt;\n&lt;/div&gt;</code></pre>",
+    "сode": ""
+  }
+]
